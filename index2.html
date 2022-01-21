@@ -1,0 +1,1650 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>男女旅遊比較</title>
+  <link rel="stylesheet" type="text/css" media="screen" href="plugins/localstorage/main.css" />
+  <!-- Google Font: Source Sans Pro -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="plugins/fontawesome-free/css/all.min.css">
+  <!-- overlayScrollbars -->
+  <link rel="stylesheet" href="plugins/overlayScrollbars/css/OverlayScrollbars.min.css">
+  <!-- Theme style -->
+  <link rel="stylesheet" href="dist/css/adminlte.min.css">
+</head>
+<body class="hold-transition dark-mode sidebar-mini layout-fixed layout-navbar-fixed layout-footer-fixed">
+<div class="wrapper">
+
+  <!-- Preloader -->
+  <div class="preloader flex-column justify-content-center align-items-center">
+    <img src="dist/img/aa.gif" height="200" width="200">
+  </div>
+
+  <!-- Navbar -->
+  <nav class="main-header navbar navbar-expand navbar-dark">
+    <!-- Left navbar links -->
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
+      </li>
+      <li class="nav-item d-none d-sm-inline-block">
+        <a href="old1.html" class="nav-link">Home</a>
+      </li>
+    </ul>
+
+    <!-- Right navbar links -->
+    <ul class="navbar-nav ml-auto">
+      <!-- Navbar Search -->
+
+      <!-- Notifications Dropdown Menu -->
+      <li class="nav-item">
+        <a class="nav-link" data-widget="fullscreen" href="#" role="button">
+          <i class="fas fa-expand-arrows-alt"></i>
+        </a>
+      </li>
+    </ul>
+  </nav>
+  <!-- /.navbar -->
+
+  <!-- Main Sidebar Container -->
+  <aside class="main-sidebar sidebar-dark-primary elevation-4">
+    <!-- Brand Logo -->
+    <a href="#" class="brand-link">
+      <span class="brand-text font-weight-light">旅遊儀表板</span>
+    </a>
+
+    <!-- Sidebar -->
+    <div class="sidebar">
+
+
+
+      <!-- Sidebar Menu -->
+      <nav class="mt-2">
+        <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
+          <!-- Add icons to the links using the .nav-icon class
+               with font-awesome or any other icon font library -->
+          <li class="nav-item menu-open">
+            <a href="#" class="nav-link">
+              <i class="nav-icon fas fa-tachometer-alt"></i>
+              <p>
+                銀髮族
+                <i class="right fas fa-angle-left"></i>
+              </p>
+            </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a href="./old1.html" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>銀髮族旅遊市場分析</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="./old.html" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>銀髮族旅遊行為分析</p>
+                </a>
+              </li>
+            </ul>
+          </li>
+		      <li class="nav-item menu-open">
+            <a href="#" class="nav-link">
+              <i class="nav-icon fas fa-tachometer-alt"></i>
+              <p>
+                自然景觀景點
+                <i class="right fas fa-angle-left"></i>
+              </p>
+            </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a href="./natural1.html" class="nav-link ">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>TOP 5 台中自然景點</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="./natural.html" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>台中討論度最低的自然景觀景點</p>
+                </a>
+              </li>
+             
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a href="index.html" class="nav-link">
+              <p>
+                旅客分析
+              </p>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="index2.html" class="nav-link active">
+              <p>
+                男女旅遊比較
+              </p>
+            </a>
+          </li>
+        </ul>
+      </nav>
+      <!-- /.sidebar-menu -->
+    </div>
+    <!-- /.sidebar -->
+  </aside>
+
+  <!-- Content Wrapper. Contains page content -->
+  <div class="content-wrapper">
+    <!-- Content Header (Page header) -->
+    <div class="content-header">
+      <div class="container-fluid">
+        <div class="row mb-2">
+          <div class="col-12">
+            <h1 class="m-0">男女旅遊比較</h1>
+			<font size='2'>本頁面主要著重在比較男性與女性在旅遊選擇時較顯著的不同之處。首先是天數的不同，藉由按鈕可以選擇不同年份的資料，資料則由四張圓餅圖攤開呈現，
+			並做出排名，讓使用者知道男女對天數之取向以及旅遊比率。第二張圖
+			比較已婚族群以及未婚族群對於天數的取向，同樣是可以藉由按鈕來觀看不同年份的資料，以及使用四張圓餅圖呈現。接著比較男性與女性之於旅遊的資訊來源不同，
+			將近7年的資料以折現圖的方式呈現，幫助使用者比較不同性別以及不同年份間資訊來源的差別。最後則是加上一些網路相關的資料比較，包刮網路各年齡使用比率以及
+			各項網路服務項目使用比率，供使用者參考。</font>
+          </div><!-- /.col -->
+          <div class="col-sm-6">
+
+          </div><!-- /.col -->
+        </div><!-- /.row -->
+      </div><!-- /.container-fluid -->
+    </div>
+    <!-- /.content-header -->	
+    <!-- Main content -->
+    <section class="content">
+      <div class="container-fluid">
+        <!-- Info boxes -->
+        <div class="row">
+          <div class="col-12 col-sm-6 col-md-3">
+            <div class="info-box">
+              <span class="info-box-icon bg-red elevation-1"><i class="fas fa-glass-cheers"></i></span>
+
+              <div class="info-box-content">
+                <span class="info-box-text">旅遊取向</span>
+                <span class="info-box-text">已婚>未婚</span>
+              </div>
+              <!-- /.info-box-content -->
+            </div>
+            <!-- /.info-box -->
+          </div>
+          <!-- /.col -->
+          <div class="col-12 col-sm-6 col-md-3">
+            <div class="info-box mb-3">
+              <span class="info-box-icon bg-pink elevation-1"><i class="fas fa-venus"></i></span>
+
+              <div class="info-box-content">
+                <span class="info-box-text">旅遊取向</span>
+                <span class="info-box-text">女性>男性</span>
+              </div>
+              <!-- /.info-box-content -->
+            </div>
+            <!-- /.info-box -->
+          </div>
+          <!-- /.col -->
+
+          <!-- fix for small devices only -->
+          <div class="clearfix hidden-md-up"></div>
+
+          <div class="col-12 col-sm-6 col-md-3">
+            <div class="info-box mb-3">
+              <span class="info-box-icon bg-orange elevation-1"><i class="fas fa-venus"></i></span>
+
+              <div class="info-box-content">
+                <span class="info-box-text">家庭決策者</span>
+                <span class="info-box-text">妻子>others</span>
+              </div>
+              <!-- /.info-box-content -->
+            </div>
+            <!-- /.info-box -->
+          </div>
+          <!-- /.col -->
+          <div class="col-12 col-sm-6 col-md-3">
+            <div class="info-box mb-3">
+              <span class="info-box-icon bg-blue elevation-1"><i class="fas fa-laptop"></i></span>
+
+              <div class="info-box-content">
+                <span class="info-box-text">資訊來源趨勢</span>
+                <span class="info-box-text">網路</span>
+              </div>
+              <!-- /.info-box-content -->
+            </div>
+            <!-- /.info-box -->
+          </div>
+          <!-- /.col -->
+        </div>
+        <!-- /.row -->
+
+        <div class="row">
+          <div class="col-md-12">
+            <div class="card">
+              <div class="card-header">
+                <h5 class="card-title">性別旅遊天數</h5>
+
+                <div class="card-tools">
+                  <ul class="nav nav-pills ml-auto">
+                    <li class="nav-item">
+                      <a class="nav-link active" href="#a2020" data-toggle="tab">2020</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#a2019" data-toggle="tab">2019</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#a2018" data-toggle="tab">2018</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#a2017" data-toggle="tab">2017</a>
+                    </li>					
+                  </ul>
+                </div>
+              </div>
+              <!-- /.card-header -->
+              <div class="card-body">
+                <div class="tab-content p-0">
+                  <!-- Morris chart - Sales -->
+                  <div class="tab-pane active" id="a2020" style="height: 300px">
+                    <canvas class="col-md-2" id="donutChart1" height="300" style="height: 300px;display:inline"></canvas> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp
+                    <canvas class="col-md-2" id="donutChart2" height="300" style="height: 300px;display:inline"></canvas> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp
+					<canvas class="col-md-2" id="donutChart4" height="300" style="height: 300px;display:inline"></canvas> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp
+					<canvas class="col-md-2" id="donutChart3" height="300" style="height: 300px;display:inline"></canvas>
+				  </div>
+                  <div class="tab-pane" id="a2017" style="height: 300px">
+                    <canvas class="col-md-2" id="donutChart20171" height="300" style="height: 300px;display:inline"></canvas> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp		
+                    <canvas class="col-md-2" id="donutChart20172" height="300" style="height: 300px;display:inline"></canvas> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp
+					<canvas class="col-md-2" id="donutChart20174" height="300" style="height: 300px;display:inline"></canvas> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp
+					<canvas class="col-md-2" id="donutChart20173" height="300" style="height: 300px;display:inline"></canvas>							
+				  </div>
+                  <div class="tab-pane" id="a2018" style="height: 300px">
+                    <canvas class="col-md-2" id="donutChart20181" height="300" style="height: 300px;display:inline"></canvas> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp	
+                    <canvas class="col-md-2" id="donutChart20182" height="300" style="height: 300px;display:inline"></canvas> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp
+					<canvas class="col-md-2" id="donutChart20184" height="300" style="height: 300px;display:inline"></canvas> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp
+					<canvas class="col-md-2" id="donutChart20183" height="300" style="height: 300px;display:inline"></canvas>
+				  </div>
+                  <div class="tab-pane" id="a2019" style="height: 300px">
+                    <canvas class="col-md-2" id="donutChart20191" height="300" style="height: 300px;display:inline"></canvas> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp		
+                    <canvas class="col-md-2" id="donutChart20192" height="300" style="height: 300px;display:inline"></canvas> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp
+					<canvas class="col-md-2" id="donutChart20194" height="300" style="height: 300px;display:inline"></canvas> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp
+					<canvas class="col-md-2" id="donutChart20193" height="300" style="height: 300px;display:inline"></canvas>							
+				  </div>
+                </div>
+			  </div>
+              <!-- ./card-body -->
+              <div class="card-footer">
+                <div class="row">
+                  <div class="col-12">
+                    <div class="description-block border-right">
+                      <span class="description-text">女性過夜>女性當日來回>男性當日來回>男性過夜</span>
+                    </div>
+                    <!-- /.description-block -->
+                  </div>
+                  <!-- /.col -->
+
+                    <!-- /.description-block -->
+                  </div>
+                </div>
+                <!-- /.row -->
+              </div>
+              <!-- /.card-footer -->
+            </div>
+            <!-- /.card -->
+          </div>
+          <!-- /.col -->
+        </div>
+        <!-- /.row -->
+        <div class="row">
+          <div class="col-md-12">
+            <div class="card">
+              <div class="card-header">
+                <h5 class="card-title">已婚未婚比較</h5>
+
+                <div class="card-tools">
+                  <ul class="nav nav-pills ml-auto">
+                    <li class="nav-item">
+                      <a class="nav-link active" href="#b2020" data-toggle="tab">2020</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#b2019" data-toggle="tab">2019</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#b2018" data-toggle="tab">2018</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#b2017" data-toggle="tab">2017</a>
+                    </li>					
+                  </ul>
+                </div>
+              </div>
+              <!-- /.card-header -->
+              <div class="card-body">
+                <div class="tab-content p-0">
+                  <!-- Morris chart - Sales -->
+                  <div class="tab-pane active" id="b2020" style="height: 300px">
+                    <canvas class="col-md-2" id="donutChart12" height="300" style="height: 300px;display:inline"></canvas> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp
+                    <canvas class="col-md-2" id="donutChart11" height="300" style="height: 300px;display:inline"></canvas> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp
+					<canvas class="col-md-2" id="donutChart14" height="300" style="height: 300px;display:inline"></canvas> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp
+					<canvas class="col-md-2" id="donutChart13" height="300" style="height: 300px;display:inline"></canvas>
+				  </div>
+                  <div class="tab-pane" id="b2017" style="height: 300px">
+                    <canvas class="col-md-2" id="donutChart201712" height="300" style="height: 300px;display:inline"></canvas> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp		
+                    <canvas class="col-md-2" id="donutChart201711" height="300" style="height: 300px;display:inline"></canvas> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp
+					<canvas class="col-md-2" id="donutChart201714" height="300" style="height: 300px;display:inline"></canvas> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp
+					<canvas class="col-md-2" id="donutChart201713" height="300" style="height: 300px;display:inline"></canvas>							
+				  </div>
+                  <div class="tab-pane" id="b2018" style="height: 300px">
+                    <canvas class="col-md-2" id="donutChart201812" height="300" style="height: 300px;display:inline"></canvas> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp	
+                    <canvas class="col-md-2" id="donutChart201811" height="300" style="height: 300px;display:inline"></canvas> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp
+					<canvas class="col-md-2" id="donutChart201814" height="300" style="height: 300px;display:inline"></canvas> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp
+					<canvas class="col-md-2" id="donutChart201813" height="300" style="height: 300px;display:inline"></canvas>
+				  </div>
+                  <div class="tab-pane" id="b2019" style="height: 300px">
+                    <canvas class="col-md-2" id="donutChart201912" height="300" style="height: 300px;display:inline"></canvas> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp		
+                    <canvas class="col-md-2" id="donutChart201911" height="300" style="height: 300px;display:inline"></canvas> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp
+					<canvas class="col-md-2" id="donutChart201914" height="300" style="height: 300px;display:inline"></canvas> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp
+					<canvas class="col-md-2" id="donutChart201913" height="300" style="height: 300px;display:inline"></canvas>							
+				  </div>
+                </div>
+			  </div>
+              <!-- ./card-body -->
+              <div class="card-footer">
+                <div class="row">
+                  <div class="col-12">
+                    <div class="description-block border-right">
+                      <span class="description-text">已婚過夜>已婚當日來回>未婚當日來回>未婚過夜</span>
+                    </div>
+                    <!-- /.description-block -->
+                  </div>
+                  <!-- /.col -->              
+
+                    <!-- /.description-block -->
+                  </div>
+                
+                <!-- /.row -->
+              </div>
+              <!-- /.card-footer -->
+            </div>
+            <!-- /.card -->
+          </div>
+          <!-- /.col -->
+        </div>
+        <div class="row">
+          <div class="col-md-12">
+            <div class="card">
+              <div class="card-header">
+                <h5 class="card-title">男女旅遊資訊來源</h5>
+                <div class="card-tools">
+                  <button type="button" class="btn btn-tool" data-card-widget="collapse">
+                    <i class="fas fa-minus"></i>
+                  </button>
+                  <div class="btn-group">
+                    <button type="button" class="btn btn-tool dropdown-toggle" data-toggle="dropdown">
+                      <i class="fas fa-wrench"></i>
+                    </button>
+                    <div class="dropdown-menu dropdown-menu-right" role="menu">
+                      <a href="#" class="dropdown-item">Action</a>
+                      <a href="#" class="dropdown-item">Another action</a>
+                      <a href="#" class="dropdown-item">Something else here</a>
+                      <a class="dropdown-divider"></a>
+                      <a href="#" class="dropdown-item">Separated link</a>
+                    </div>
+                  </div>
+                  <button type="button" class="btn btn-tool" data-card-widget="remove">
+                    <i class="fas fa-times"></i>
+                  </button>
+                </div>
+              </div>
+              <!-- /.card-header -->
+              <div class="card-body">
+                <div class="row">
+                  <div class="col-md-5">
+                    <p class="text-center">
+                      <strong>男性旅遊資訊來源</strong>
+                    </p>
+
+                    <div class="chart">
+                      <!-- Sales Chart Canvas -->
+                      <canvas id="lineChart1" height="180" style="height: 180px;"></canvas>
+                    </div>
+                    <!-- /.chart-responsive -->
+                  </div>
+                  <div class="col-md-5">
+                    <p class="text-center">
+                      <strong>女性旅遊資訊來源</strong>
+                    </p>
+
+                    <div class="chart">
+                      <!-- Sales Chart Canvas -->
+                      <canvas id="lineChart2" height="180" style="height: 180px;"></canvas>
+                    </div>
+                    <!-- /.chart-responsive -->
+                  </div>				  
+                  <!-- /.col -->
+                  <div class="col-md-2">
+                    <p class="text-center">
+                      <strong>重點摘要</strong>
+                    </p>
+
+                    <div class="progress-group">
+                      男性
+                      <b>2018-2019 網路超過親友</b>
+
+                    </div>
+                    <!-- /.progress-group -->
+
+                    <div class="progress-group">
+                      女性
+                      <b>2019-2020 網路追上親友</b>
+
+                    </div>					
+
+                    <!-- /.progress-group -->
+                  </div>
+                  <!-- /.col -->
+                </div>
+                <!-- /.row -->
+              </div>
+              <!-- ./card-body -->
+              <div class="card-footer">
+                <div class="row">
+                  <div class="col-sm-6 col-6">
+                    <div class="description-block border-right">
+                      <span class="description-percentage text-success"><i class="fas fa-caret-up"></i> 42.91%</span>
+                      <h5 class="description-header">2018-2020</h5>
+                      <span class="description-text">男性網路成長率MAX</span>
+                    </div>
+                    <!-- /.description-block -->
+                  </div>
+                  <!-- /.col -->
+                  <!-- /.col -->
+                  <div class="col-sm-6 col-6">
+                    <div class="description-block border-right">
+                      <span class="description-percentage text-success"><i class="fas fa-caret-up"></i> 64.46%</span>
+                      <h5 class="description-header">2018-2020</h5>
+                      <span class="description-text">女性網路成長率MAX</span>
+                    </div>
+                    <!-- /.description-block -->
+                  </div>
+
+                    <!-- /.description-block -->
+                  </div>
+                
+                <!-- /.row -->
+              </div>
+              <!-- /.card-footer -->
+            </div>
+            <!-- /.card -->
+          </div>
+          <!-- /.col -->
+        </div>
+		<font size="2">接下來將依序表現出一些與網路相關的資訊，包括各年齡的網路使用率以及網路服務項目使用率，皆利用長條圖來表現個年份的資料。
+		由於前述截止目前的網路成長逐漸上升，若未來想根據網路方面來做為推動方向，或許可以用以下關於網路使用行為資料來參考。</font>
+        <div class="row">
+          <div class="col-md-12">
+            <div class="card">
+              <div class="card-header">
+                <h5 class="card-title">網路使用(%)</h5>
+
+                <div class="card-tools">
+                  <button type="button" class="btn btn-tool" data-card-widget="collapse">
+                    <i class="fas fa-minus"></i>
+                  </button>
+                  <div class="btn-group">
+                    <button type="button" class="btn btn-tool dropdown-toggle" data-toggle="dropdown">
+                      <i class="fas fa-wrench"></i>
+                    </button>
+                    <div class="dropdown-menu dropdown-menu-right" role="menu">
+                      <a href="#" class="dropdown-item">Action</a>
+                      <a href="#" class="dropdown-item">Another action</a>
+                      <a href="#" class="dropdown-item">Something else here</a>
+                      <a class="dropdown-divider"></a>
+                      <a href="#" class="dropdown-item">Separated link</a>
+                    </div>
+                  </div>
+                  <button type="button" class="btn btn-tool" data-card-widget="remove">
+                    <i class="fas fa-times"></i>
+                  </button>
+                </div>
+              </div>
+              <!-- /.card-header -->
+              <div class="card-body">
+                <div class="row">
+                  <div class="col-md-12">
+                    <div class="chart">
+                      <!-- Sales Chart Canvas -->
+                      <canvas id="barChart1" height="180" style="height: 180px;"></canvas>					  
+                    </div>
+					
+                    <!-- /.chart-responsive -->
+                  </div>
+                  <!-- /.col -->
+
+                  <!-- /.col -->
+                </div>
+                <!-- /.row -->
+              </div>
+              <!-- ./card-body -->
+              <div class="card-footer">
+                <div class="row">
+                  <div class="col-12">
+                    <div class="description-block border-right">
+                      <span class="description-text">12 至 55 歲的上網率差異不大，56 歲以上的上網率則減少約1成。 </span>
+                    </div>
+                    <!-- /.description-block -->
+                  </div>
+                  <!-- /.col -->
+
+                    <!-- /.description-block -->
+                  </div>
+                </div>
+                <!-- /.row -->
+              </div>
+              <!-- /.card-footer -->
+            </div>
+            <!-- /.card -->
+          
+          <!-- /.col -->
+        </div>
+        <!-- /.row -->
+        <div class="row">
+          <div class="col-md-12">
+            <div class="card">
+              <div class="card-header">
+                <h5 class="card-title">網路服務項目使用率</h5>
+
+                <div class="card-tools">
+                  <button type="button" class="btn btn-tool" data-card-widget="collapse">
+                    <i class="fas fa-minus"></i>
+                  </button>
+                  <div class="btn-group">
+                    <button type="button" class="btn btn-tool dropdown-toggle" data-toggle="dropdown">
+                      <i class="fas fa-wrench"></i>
+                    </button>
+                    <div class="dropdown-menu dropdown-menu-right" role="menu">
+                      <a href="#" class="dropdown-item">Action</a>
+                      <a href="#" class="dropdown-item">Another action</a>
+                      <a href="#" class="dropdown-item">Something else here</a>
+                      <a class="dropdown-divider"></a>
+                      <a href="#" class="dropdown-item">Separated link</a>
+                    </div>
+                  </div>
+                  <button type="button" class="btn btn-tool" data-card-widget="remove">
+                    <i class="fas fa-times"></i>
+                  </button>
+                </div>
+              </div>
+              <!-- /.card-header -->
+              <div class="card-body">
+                <div class="row">
+                  <div class="col-md-12">
+
+                    <div class="chart">
+                      <!-- Sales Chart Canvas -->
+                      <canvas id="barChart2" height="180" style="height: 180px;"></canvas>
+                    </div>
+                    <!-- /.chart-responsive -->
+                  </div>				  
+                  <!-- /.col -->
+                  <!-- /.col -->
+                </div>
+                <!-- /.row -->
+              </div>
+              <!-- ./card-body -->
+              <div class="card-footer">
+                <div class="row">
+                  <!-- /.col -->
+                  <!-- /.col -->
+                  <div class="col-12">
+                    <div class="description-block border-right">
+                      <span class="description-text">各世代使用通訊服務的比率皆超過九成，社群論壇則是與年齡成反比，年齡越輕者使用率越高。</span>
+                    </div>
+                    <!-- /.description-block -->
+                  </div>
+
+                    <!-- /.description-block -->
+                  </div>
+                
+                <!-- /.row -->
+              </div>
+              <!-- /.card-footer -->
+            </div>
+            <!-- /.card -->
+          </div>
+          <!-- /.col -->
+        </div>		
+		
+		<div class="container">
+			<h1>筆記區</h1>
+			<form id=displayform>
+			  <input type="text" name='wish' placeholder="輸入筆記資源" required maxlength="100">
+			  <input type="submit" value="確定">
+			</form>
+			<ul id=display>
+			  <!--Display wishes here-->
+			</ul>
+		</div>
+		
+		
+
+		
+		
+
+
+<!-- ./wrapper -->
+<script src="plugins/localstorage/main2.js"></script>
+<!-- REQUIRED SCRIPTS -->
+<!-- jQuery -->
+<script src="plugins/jquery/jquery.min.js"></script>
+<!-- Bootstrap -->
+<script src="plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+<!-- overlayScrollbars -->
+<script src="plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js"></script>
+<!-- AdminLTE App -->
+<script src="dist/js/adminlte.js"></script>
+
+<!-- PAGE PLUGINS -->
+<!-- jQuery Mapael -->
+<script src="plugins/jquery-mousewheel/jquery.mousewheel.js"></script>
+<script src="plugins/raphael/raphael.min.js"></script>
+<script src="plugins/jquery-mapael/jquery.mapael.min.js"></script>
+<script src="plugins/jquery-mapael/maps/usa_states.min.js"></script>
+<!-- ChartJS -->
+<script src="plugins/chart.js/Chart.min.js"></script>
+
+<!-- AdminLTE for demo purposes -->
+<script src="dist/js/demo.js"></script>
+<!-- AdminLTE dashboard demo (This is only for demo purposes) -->
+<script src="dist/js/pages/dashboard2.js"></script>
+<script>
+  $(function () {
+
+    var donutChartCanvas1 = $('#donutChart1').get(0).getContext('2d')
+    var donutData1        = {
+      labels: [
+          '2020女性過夜比率',
+          ''
+      ],
+      datasets: [
+        {
+          data: [53.3,46.7],
+          backgroundColor : ['#FF88C2','#FFFFFF'],
+        }
+      ]
+    }
+    var donutOptions     = {
+      maintainAspectRatio : false,
+      responsive : true,
+	  legend:{
+		  labels:{
+			fontColor:'white'
+		}
+	  },  
+    }
+    //Create pie or douhnut chart
+    // You can switch between pie and douhnut using the method below.
+    new Chart(donutChartCanvas1, {
+      type: 'doughnut',
+      data: donutData1,
+      options: donutOptions
+    })
+    var donutChartCanvas2 = $('#donutChart2').get(0).getContext('2d')
+    var donutData2        = {
+      labels: [
+          '2020女性當日來回比率',
+          ''
+      ],
+      datasets: [
+        {
+          data: [50.3,49.7],
+          backgroundColor : ['#FF1493','#FFFFFF'],
+        }
+      ]
+    }	
+    new Chart(donutChartCanvas2, {
+      type: 'doughnut',
+      data: donutData2,
+      options: donutOptions
+    })
+    var donutChartCanvas3 = $('#donutChart3').get(0).getContext('2d')
+    var donutData3        = {
+      labels: [
+          '2020男性過夜比率',
+          ''
+      ],
+      datasets: [
+        {
+          data: [46.7,53.3],
+          backgroundColor : ['#87CEFA','#FFFFFF'],
+        }
+      ]
+    }	
+    new Chart(donutChartCanvas3, {
+      type: 'doughnut',
+      data: donutData3,
+      options: donutOptions
+    })
+    var donutChartCanvas4 = $('#donutChart4').get(0).getContext('2d')
+    var donutData4        = {
+      labels: [
+          '2020男性當日來回比率',
+          ''
+      ],
+      datasets: [
+        {
+          data: [49.7,50.3],
+          backgroundColor : ['#0000FF','#FFFFFF'],
+        }
+      ]
+    }	
+    new Chart(donutChartCanvas4, {
+      type: 'doughnut',
+      data: donutData4,
+      options: donutOptions
+    })
+
+
+
+
+
+
+    var donutChartCanvas20171 = $('#donutChart20171').get(0).getContext('2d')
+    var donutData20171        = {
+      labels: [
+          '2017女性過夜比率',
+          ''
+      ],
+      datasets: [
+        {
+          data: [52.7,47.3],
+          backgroundColor : ['#FF88C2','#FFFFFF'],
+        }
+      ]
+    }
+    //Create pie or douhnut chart
+    // You can switch between pie and douhnut using the method below.
+    new Chart(donutChartCanvas20171, {
+      type: 'doughnut',
+      data: donutData20171,
+      options: donutOptions
+    })
+    var donutChartCanvas20172 = $('#donutChart20172').get(0).getContext('2d')
+    var donutData20172        = {
+      labels: [
+          '2017女性當日來回比率',
+          ''
+      ],
+      datasets: [
+        {
+          data: [50.3,49.7],
+          backgroundColor : ['#FF1493','#FFFFFF'],
+        }
+      ]
+    }	
+    new Chart(donutChartCanvas20172, {
+      type: 'doughnut',
+      data: donutData20172,
+      options: donutOptions
+    })
+    var donutChartCanvas20173 = $('#donutChart20173').get(0).getContext('2d')
+    var donutData20173        = {
+      labels: [
+          '2017男性過夜比率',
+          ''
+      ],
+      datasets: [
+        {
+          data: [47.3,52.7],
+          backgroundColor : ['#87CEFA','#FFFFFF'],
+        }
+      ]
+    }	
+    new Chart(donutChartCanvas20173, {
+      type: 'doughnut',
+      data: donutData20173,
+      options: donutOptions
+    })
+    var donutChartCanvas20174 = $('#donutChart20174').get(0).getContext('2d')
+    var donutData20174        = {
+      labels: [
+          '2017男性當日來回比率',
+          ''
+      ],
+      datasets: [
+        {
+          data: [49.7,50.3],
+          backgroundColor : ['#0000FF','#FFFFFF'],
+        }
+      ]
+    }	
+    new Chart(donutChartCanvas20174, {
+      type: 'doughnut',
+      data: donutData20174,
+      options: donutOptions
+    })
+	
+
+
+    var donutChartCanvas20181 = $('#donutChart20181').get(0).getContext('2d')
+    var donutData20181        = {
+      labels: [
+          '2018女性過夜比率',
+          ''
+      ],
+      datasets: [
+        {
+          data: [52.3,47.7],
+          backgroundColor : ['#FF88C2','#FFFFFF'],
+        }
+      ]
+    }
+    new Chart(donutChartCanvas20181, {
+      type: 'doughnut',
+      data: donutData20181,
+      options: donutOptions
+    })
+    var donutChartCanvas20182 = $('#donutChart20182').get(0).getContext('2d')
+    var donutData20182        = {
+      labels: [
+          '2018女性當日來回比率',
+          ''
+      ],
+      datasets: [
+        {
+          data: [50.6,49.4],
+          backgroundColor : ['#FF1493','#FFFFFF'],
+        }
+      ]
+    }	
+    new Chart(donutChartCanvas20182, {
+      type: 'doughnut',
+      data: donutData20182,
+      options: donutOptions
+    })
+    var donutChartCanvas20183 = $('#donutChart20183').get(0).getContext('2d')
+    var donutData20183        = {
+      labels: [
+          '2018男性過夜比率',
+          ''
+      ],
+      datasets: [
+        {
+          data: [47.7,52.3],
+          backgroundColor : ['#87CEFA','#FFFFFF'],
+        }
+      ]
+    }	
+    new Chart(donutChartCanvas20183, {
+      type: 'doughnut',
+      data: donutData20183,
+      options: donutOptions
+    })
+    var donutChartCanvas20184 = $('#donutChart20184').get(0).getContext('2d')
+    var donutData20184        = {
+      labels: [
+          '2018男性當日來回比率',
+          ''
+      ],
+      datasets: [
+        {
+          data: [49.4,50.6],
+          backgroundColor : ['#0000FF','#FFFFFF'],
+        }
+      ]
+    }	
+    new Chart(donutChartCanvas20184, {
+      type: 'doughnut',
+      data: donutData20184,
+      options: donutOptions
+    })
+	
+	
+	
+    var donutChartCanvas20191 = $('#donutChart20191').get(0).getContext('2d')
+    var donutData20191        = {
+      labels: [
+          '2019女性過夜比率',
+          ''
+      ],
+      datasets: [
+        {
+          data: [52.3,47.7],
+          backgroundColor : ['#FF88C2','#FFFFFF'],
+        }
+      ]
+    }
+    //Create pie or douhnut chart
+    // You can switch between pie and douhnut using the method below.
+    new Chart(donutChartCanvas20191, {
+      type: 'doughnut',
+      data: donutData20191,
+      options: donutOptions
+    })
+    var donutChartCanvas20192 = $('#donutChart20192').get(0).getContext('2d')
+    var donutData20192        = {
+      labels: [
+          '2019女性當日來回比率',
+          ''
+      ],
+      datasets: [
+        {
+          data: [50.2,49.8],
+          backgroundColor : ['#FF1493','#FFFFFF'],
+        }
+      ]
+    }	
+    new Chart(donutChartCanvas20192, {
+      type: 'doughnut',
+      data: donutData20192,
+      options: donutOptions
+    })
+    var donutChartCanvas20193 = $('#donutChart20193').get(0).getContext('2d')
+    var donutData20193        = {
+      labels: [
+          '2019男性過夜比率',
+          ''
+      ],
+      datasets: [
+        {
+          data: [47.7,52.3],
+          backgroundColor : ['#87CEFA','#FFFFFF'],
+        }
+      ]
+    }	
+    new Chart(donutChartCanvas20193, {
+      type: 'doughnut',
+      data: donutData20193,
+      options: donutOptions
+    })
+    var donutChartCanvas20194 = $('#donutChart20194').get(0).getContext('2d')
+    var donutData20194        = {
+      labels: [
+          '2019男性當日來回比率',
+          ''
+      ],
+      datasets: [
+        {
+          data: [49.8,50.2],
+          backgroundColor : ['#0000FF','#FFFFFF'],
+        }
+      ]
+    }	
+    new Chart(donutChartCanvas20194, {
+      type: 'doughnut',
+      data: donutData20194,
+      options: donutOptions
+    })
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+	
+	
+	
+    var donutChartCanvas11 = $('#donutChart11').get(0).getContext('2d')
+    var donutData11        = {
+      labels: [
+          '2020已婚當日來回比率',
+          ''
+      ],
+      datasets: [
+        {
+          data: [59.1,40.9],
+          backgroundColor : ['#FFA500','#FFFFFF'],
+        }
+      ]
+    }
+    //Create pie or douhnut chart
+    // You can switch between pie and douhnut using the method below.
+    new Chart(donutChartCanvas11, {
+      type: 'doughnut',
+      data: donutData11,
+      options: donutOptions
+    })
+    var donutChartCanvas12 = $('#donutChart12').get(0).getContext('2d')
+    var donutData12        = {
+      labels: [
+          '2020已婚過夜比率',
+          ''
+      ],
+      datasets: [
+        {
+          data: [64.5,35.5],
+          backgroundColor : ['#FF7744','#FFFFFF'],
+        }
+      ]
+    }	
+    new Chart(donutChartCanvas12, {
+      type: 'doughnut',
+      data: donutData12,
+      options: donutOptions
+    })
+    var donutChartCanvas13 = $('#donutChart13').get(0).getContext('2d')
+    var donutData13        = {
+      labels: [
+          '2020未婚過夜比率',
+          ''
+      ],
+      datasets: [
+        {
+          data: [30.6,69.7],
+          backgroundColor : ['#90EE90','#FFFFFF'],
+        }
+      ]
+    }	
+    new Chart(donutChartCanvas13, {
+      type: 'doughnut',
+      data: donutData13,
+      options: donutOptions
+    })
+    var donutChartCanvas14 = $('#donutChart14').get(0).getContext('2d')
+    var donutData14        = {
+      labels: [
+          '2020未婚當日來回比率',
+          ''
+      ],
+      datasets: [
+        {
+          data: [34.6,65.4],
+          backgroundColor : ['#008B8B','#FFFFFF'],
+        }
+      ]
+    }	
+    new Chart(donutChartCanvas14, {
+      type: 'doughnut',
+      data: donutData14,
+      options: donutOptions
+    })
+	
+	
+    var donutChartCanvas201711 = $('#donutChart201711').get(0).getContext('2d')
+    var donutData201711        = {
+      labels: [
+          '2017已婚當日來回比率',
+          ''
+      ],
+      datasets: [
+        {
+          data: [58.7,41.3],
+          backgroundColor : ['#FFA500','#FFFFFF'],
+        }
+      ]
+    }
+    //Create pie or douhnut chart
+    // You can switch between pie and douhnut using the method below.
+    new Chart(donutChartCanvas201711, {
+      type: 'doughnut',
+      data: donutData201711,
+      options: donutOptions
+    })
+	
+	
+    var donutChartCanvas201712 = $('#donutChart201712').get(0).getContext('2d')
+    var donutData201712        = {
+      labels: [
+          '2017已婚過夜比率',
+          ''
+      ],
+      datasets: [
+        {
+          data: [62.7,37.3],
+          backgroundColor : ['#FF7744','#FFFFFF'],
+        }
+      ]
+    }	
+    new Chart(donutChartCanvas201712, {
+      type: 'doughnut',
+      data: donutData201712,
+      options: donutOptions
+    })
+    var donutChartCanvas201713 = $('#donutChart201713').get(0).getContext('2d')
+    var donutData201713        = {
+      labels: [
+          '2017未婚過夜比率',
+          ''
+      ],
+      datasets: [
+        {
+          data: [32.3,67.7],
+          backgroundColor : ['#90EE90','#FFFFFF'],
+        }
+      ]
+    }	
+    new Chart(donutChartCanvas201713, {
+      type: 'doughnut',
+      data: donutData201713,
+      options: donutOptions
+    })
+    var donutChartCanvas201714 = $('#donutChart201714').get(0).getContext('2d')
+    var donutData201714        = {
+      labels: [
+          '2017未婚當日來回比率',
+          ''
+      ],
+      datasets: [
+        {
+          data: [35.3,64.7],
+          backgroundColor : ['#008B8B','#FFFFFF'],
+        }
+      ]
+    }	
+    new Chart(donutChartCanvas201714, {
+      type: 'doughnut',
+      data: donutData201714,
+      options: donutOptions
+    })
+	
+	
+
+
+    var donutChartCanvas201811 = $('#donutChart201811').get(0).getContext('2d')
+    var donutData201811        = {
+      labels: [
+          '2018已婚當日來回比率',
+          ''
+      ],
+      datasets: [
+        {
+          data: [58.9,41.1],
+          backgroundColor : ['#FFA500','#FFFFFF'],
+        }
+      ]
+    }
+    //Create pie or douhnut chart
+    // You can switch between pie and douhnut using the method below.
+    new Chart(donutChartCanvas201811, {
+      type: 'doughnut',
+      data: donutData201811,
+      options: donutOptions
+    })
+	
+	
+    var donutChartCanvas201812 = $('#donutChart201812').get(0).getContext('2d')
+    var donutData201812        = {
+      labels: [
+          '2018已婚過夜比率',
+          ''
+      ],
+      datasets: [
+        {
+          data: [65.5,34.5],
+          backgroundColor : ['#FF7744','#FFFFFF'],
+        }
+      ]
+    }	
+    new Chart(donutChartCanvas201812, {
+      type: 'doughnut',
+      data: donutData201812,
+      options: donutOptions
+    })
+    var donutChartCanvas201813 = $('#donutChart201813').get(0).getContext('2d')
+    var donutData201813        = {
+      labels: [
+          '2018未婚過夜比率',
+          ''
+      ],
+      datasets: [
+        {
+          data: [29.7,70.3],
+          backgroundColor : ['#90EE90','#FFFFFF'],
+        }
+      ]
+    }	
+    new Chart(donutChartCanvas201813, {
+      type: 'doughnut',
+      data: donutData201813,
+      options: donutOptions
+    })
+    var donutChartCanvas201814 = $('#donutChart201814').get(0).getContext('2d')
+    var donutData201814        = {
+      labels: [
+          '2018未婚當日來回比率',
+          ''
+      ],
+      datasets: [
+        {
+          data: [34.9,65.1],
+          backgroundColor : ['#008B8B','#FFFFFF'],
+        }
+      ]
+    }	
+    new Chart(donutChartCanvas201814, {
+      type: 'doughnut',
+      data: donutData201814,
+      options: donutOptions
+    })
+
+
+
+    var donutChartCanvas201911 = $('#donutChart201911').get(0).getContext('2d')
+    var donutData201911        = {
+      labels: [
+          '2019已婚當日來回比率',
+          ''
+      ],
+      datasets: [
+        {
+          data: [58.2,41.7],
+          backgroundColor : ['#FFA500','#FFFFFF'],
+        }
+      ]
+    }
+    //Create pie or douhnut chart
+    // You can switch between pie and douhnut using the method below.
+    new Chart(donutChartCanvas201911, {
+      type: 'doughnut',
+      data: donutData201911,
+      options: donutOptions
+    })
+	
+	
+    var donutChartCanvas201912 = $('#donutChart201912').get(0).getContext('2d')
+    var donutData201912        = {
+      labels: [
+          '2019已婚過夜比率',
+          ''
+      ],
+      datasets: [
+        {
+          data: [63.7,36.3],
+          backgroundColor : ['#FF7744','#FFFFFF'],
+        }
+      ]
+    }	
+    new Chart(donutChartCanvas201912, {
+      type: 'doughnut',
+      data: donutData201912,
+      options: donutOptions
+    })
+    var donutChartCanvas201913 = $('#donutChart201913').get(0).getContext('2d')
+    var donutData201913        = {
+      labels: [
+          '2019未婚過夜比率',
+          ''
+      ],
+      datasets: [
+        {
+          data: [31.3,68.7],
+          backgroundColor : ['#90EE90','#FFFFFF'],
+        }
+      ]
+    }	
+    new Chart(donutChartCanvas201913, {
+      type: 'doughnut',
+      data: donutData201913,
+      options: donutOptions
+    })
+    var donutChartCanvas201914 = $('#donutChart201914').get(0).getContext('2d')
+    var donutData201914        = {
+      labels: [
+          '2019未婚當日來回比率',
+          ''
+      ],
+      datasets: [
+        {
+          data: [35.8,64.2],
+          backgroundColor : ['#008B8B','#FFFFFF'],
+        }
+      ]
+    }	
+    new Chart(donutChartCanvas201914, {
+      type: 'doughnut',
+      data: donutData201914,
+      options: donutOptions
+    })	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+    var lineChartCanvas1 = $('#lineChart1').get(0).getContext('2d')
+    var lineChartOptions = {
+      maintainAspectRatio : false,
+      responsive : true,
+      legend: {
+        display: true,
+		labels:{
+			fontColor:'white'
+		}
+      },
+      scales: {
+        xAxes: [{
+          gridLines : {
+            display : true,
+          },
+		  ticks:{
+			fontColor: 'white'		  
+		  },
+        }],
+        yAxes: [{
+          gridLines : {
+            display : true,
+          },
+		  ticks:{
+			fontColor: 'white'		  
+		  },
+        }]
+      }
+    }
+	var lineChartData1 = {
+		  labels  : ['2014', '2015', '2016', '2017','2018','2019','2020'],
+		  datasets: [
+			{
+			  label               : '未曾蒐集',
+			  backgroundColor     : 'rgba(255, 255, 0,0.9)',
+			  borderColor         : 'rgba(255, 255, 0,0.8)',
+			  pointRadius          : false,
+			  pointColor          : '#3b8bba',
+			  pointStrokeColor    : 'rgba(255, 255, 0,1)',
+			  pointHighlightFill  : '#fff',
+			  pointHighlightStroke: 'rgba(255, 255, 0,1)',
+			  data                : [48.3,45.5,43.5,40.6,37,41.5,40.1]
+			},
+			{
+			  label               : '親友、同事、同學',
+			  backgroundColor     : 'rgba(255, 0, 0, 1)',
+			  borderColor         : 'rgba(255, 0, 0, 1)',
+			  pointRadius         : false,
+			  pointColor          : 'rgba(255, 0, 0, 1)',
+			  pointStrokeColor    : '#c1c7d1',
+			  pointHighlightFill  : '#fff',
+			  pointHighlightStroke: 'rgba(255, 0, 0,1)',
+			  data                : [26.3,26.8,27,27.2,27.9,26.3,25.6]
+			},
+			{
+			  label               : '網路',
+			  backgroundColor     : 'rgba(255, 250, 250, 1)',
+			  borderColor         : 'rgba(255, 250, 250, 1)',
+			  pointRadius         : false,
+			  pointColor          : 'rgba(255, 250, 250, 1)',
+			  pointStrokeColor    : '#c1c7d1',
+			  pointHighlightFill  : '#fff',
+			  pointHighlightStroke: 'rgba(255, 250, 250,1)',
+			  data                : [20.5,22.1,23.1,23.6,23.3,29.9,33.3]
+			},
+
+		  ]
+		}
+    lineChartData1.datasets[0].fill = false;
+    lineChartData1.datasets[1].fill = false;
+	lineChartData1.datasets[2].fill = false;
+    lineChartOptions.datasetFill = false
+
+    new Chart(lineChartCanvas1, {
+      type: 'line',
+      data: lineChartData1,
+      options: lineChartOptions
+    })
+	var lineChartCanvas2 = $('#lineChart2').get(0).getContext('2d')	
+	var lineChartData2 = {
+		  labels  : ['2014', '2015', '2016', '2017','2018','2019','2020'],
+		  datasets: [
+			{
+			  label               : '未曾蒐集',
+			  backgroundColor     : 'rgba(255, 255, 0,0.9)',
+			  borderColor         : 'rgba(255, 255, 0,0.8)',
+			  pointRadius          : false,
+			  pointColor          : '#3b8bba',
+			  pointStrokeColor    : 'rgba(255, 255, 0,1)',
+			  pointHighlightFill  : '#fff',
+			  pointHighlightStroke: 'rgba(255, 255, 0,1)',
+			  pointHighlightStroke: 'rgba(255, 255, 0,1)',
+			  data                : [44.5,41.6,39,36,33.5,36.8,35.6]
+			},
+			{
+			  label               : '親友、同事、同學',
+			  backgroundColor     : 'rgba(255, 0, 4, 1)',
+			  borderColor         : 'rgba(255, 0, 4, 1)',
+			  pointRadius         : false,
+			  pointColor          : 'rgba(255, 0, 4, 1)',
+			  pointStrokeColor    : '#c1c7d1',
+			  pointHighlightFill  : '#fff',
+			  pointHighlightStroke: 'rgba(255, 0, 4,1)',
+			  data                : [30,31.9,32.9,34.1,35.8,32.2,32.4]
+			},
+			{
+			  label               : '網路',
+			  backgroundColor     : 'rgba(255, 250, 250, 1)',
+			  borderColor         : 'rgba(255, 250, 250, 1)',
+			  pointRadius         : false,
+			  pointColor          : 'rgba(255, 250, 250, 1)',
+			  pointStrokeColor    : '#c1c7d1',
+			  pointHighlightFill  : '#fff',
+			  pointHighlightStroke: 'rgba(255, 250, 250,1)',
+			  data                : [20.2,22.7,21.7,21.2,19.7,29.7,32.4]
+			},
+
+		  ]
+		}
+    lineChartData2.datasets[0].fill = false;
+    lineChartData2.datasets[1].fill = false;
+	lineChartData2.datasets[2].fill = false;
+
+    new Chart(lineChartCanvas2, {
+      type: 'line',
+      data: lineChartData2,
+      options: lineChartOptions
+    })
+
+
+
+
+	
+	
+    var barChartCanvas1 = $('#barChart1').get(0).getContext('2d')
+    var barChartData1 ={
+	  labels  : ['12-24歲','25-39歲','40-55歲','56+歲','ALL'],
+      datasets: [
+        {
+          label               : '2018(n=3088)',
+          backgroundColor     : 'rgba(0 ,255, 127,0.9)',
+          borderColor         : 'rgba(0 ,255, 127,0.8)',
+          pointRadius          : false,
+          pointColor          : 'black',
+          pointStrokeColor    : 'rgba(0 ,255, 127,1)',
+          pointHighlightFill  : '#fff',
+          pointHighlightStroke: 'rgba(0 ,255, 127,1)',
+          data                : [96.8,98.6,93.9,52.3,82.1,0]
+        },
+        {
+          label               : '2019(n=2134)',
+          backgroundColor     : 'rgba(127, 255, 0, 1)',
+          borderColor         : 'rgba(127, 255, 0, 1)',
+          pointRadius         : false,
+          pointColor          : 'rgba(127, 255, 0, 1)',
+          pointStrokeColor    : '#c1c7d1',
+          pointHighlightFill  : '#fff',
+          pointHighlightStroke: 'rgba(127, 255, 0,1)',
+          data                : [99.3,99.8,96.6,71.7,89.6]
+        },
+		{
+          label               : '2020(n=2209)',
+          backgroundColor     : 'rgba(192, 255, 62, 1)',
+          borderColor         : 'rgba(192, 255, 62, 1)',
+          pointRadius         : false,
+          pointColor          : 'rgba(192, 255, 62, 1)',
+          pointStrokeColor    : '#c1c7d1',
+          pointHighlightFill  : '#fff',
+          pointHighlightStroke: 'rgba(192, 255, 62,1)',
+          data                : [100,98.5,95.3,59.1,83.8]
+        },
+      ]
+	}
+
+    var barChartOptions = {
+      responsive              : true,
+      maintainAspectRatio     : false,
+      datasetFill             : false,
+	  legend:{
+		  labels:{
+			fontColor:'white'
+		}
+	  },
+      scales: {  
+        xAxes: [{
+          gridLines : {
+            display : true,
+          },
+		  ticks:{
+			fontColor: 'white'		  
+		  },
+
+        }],	  
+        yAxes: [{
+          gridLines : {
+            display : true,
+          },
+		  ticks:{
+			fontColor: 'white'		  
+		  },	  
+
+        }]
+      }
+	  
+    }
+
+    new Chart(barChartCanvas1, {
+      type: 'bar',
+      data: barChartData1,
+      options: barChartOptions
+    })
+    var barChartCanvas2 = $('#barChart2').get(0).getContext('2d')
+    var barChartData2 ={
+	  labels  : ['即時通訊','網路新聞','影音/直播','電腦/搜尋','社群論壇'],
+      datasets: [
+        {
+          label               : '12-24歲',
+          backgroundColor     : 'rgba(147, 112,219,0.9)',
+          borderColor         : 'rgba(147, 112,219,0.8)',
+          pointRadius          : false,
+          pointColor          : 'black',
+          pointStrokeColor    : 'rgba(147, 112,219,1)',
+          pointHighlightFill  : '#fff',
+          pointHighlightStroke: 'rgba(147, 112,219,1)',
+          data                : [90.2,79,87.4,76.6,95.6,0]
+        },
+        {
+          label               : '25-39歲',
+          backgroundColor     : 'rgba(255, 0 ,255, 1)',
+          borderColor         : 'rgba(255, 0 ,255, 1)',
+          pointRadius         : false,
+          pointColor          : 'rgba(255, 0 ,255, 1)',
+          pointStrokeColor    : '#c1c7d1',
+          pointHighlightFill  : '#fff',
+          pointHighlightStroke: 'rgba(255, 0 ,255,1)',
+          data                : [97.2,85.3,88.6,89,92.5]
+        },
+		{
+          label               : '40-55歲',
+          backgroundColor     : 'rgba(221 ,160 ,221, 1)',
+          borderColor         : 'rgba(221 ,160 ,221, 1)',
+          pointRadius         : false,
+          pointColor          : 'rgba(221 ,160 ,221, 1)',
+          pointStrokeColor    : '#c1c7d1',
+          pointHighlightFill  : '#fff',
+          pointHighlightStroke: 'rgba(221 ,160 ,221,1)',
+          data                : [97.8,84.2,77.3,73.6,79.5]
+        },
+		{
+          label               : '56+歲',
+          backgroundColor     : 'rgba(186 ,85 ,211, 1)',
+          borderColor         : 'rgba(186, 85, 211, 1)',
+          pointRadius         : false,
+          pointColor          : 'rgba(186, 85, 211, 1)',
+          pointStrokeColor    : '#c1c7d1',
+          pointHighlightFill  : '#fff',
+          pointHighlightStroke: 'rgba(186, 85, 211,1)',
+          data                : [95.1,71,54.9,40,54.4]
+        },
+		{
+          label               : 'ALL',
+          backgroundColor     : 'rgba(148 ,0 ,211, 1)',
+          borderColor         : 'rgba(148 ,0 ,211, 1)',
+          pointRadius         : false,
+          pointColor          : 'rgba(148 ,0 ,211, 1)',
+          pointStrokeColor    : '#c1c7d1',
+          pointHighlightFill  : '#fff',
+          pointHighlightStroke: 'rgba(148 ,0 ,211,1)',
+          data                : [95.6,80.3,77,70.7,80.1]
+        },		
+      ]
+	}	
+    new Chart(barChartCanvas2, {
+      type: 'bar',
+      data: barChartData2,
+      options: barChartOptions
+    })	
+
+    //---------------------
+    //- STACKED BAR CHART -
+    //---------------------
+    var stackedBarChartCanvas = $('#stackedBarChart').get(0).getContext('2d')
+    var stackedBarChartData = $.extend(true, {}, barChartData)
+
+    var stackedBarChartOptions = {
+      responsive              : true,
+      maintainAspectRatio     : false,
+      scales: {
+        xAxes: [{
+          stacked: true,
+        }],
+        yAxes: [{
+          stacked: true
+        }]
+      }
+    }
+
+    new Chart(stackedBarChartCanvas, {
+      type: 'bar',
+      data: stackedBarChartData,
+      options: stackedBarChartOptions
+    })
+  })	 
+</script>
+</body>
+</html>

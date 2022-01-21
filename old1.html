@@ -1,0 +1,672 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>銀髮族旅遊市場分析</title>
+
+  <!-- Google Font: Source Sans Pro -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="plugins/fontawesome-free/css/all.min.css">
+  <!-- Ionicons -->
+  <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+  <!-- Tempusdominus Bootstrap 4 -->
+  <link rel="stylesheet" href="plugins/tempusdominus-bootstrap-4/css/tempusdominus-bootstrap-4.min.css">
+  <!-- iCheck -->
+  <link rel="stylesheet" href="plugins/icheck-bootstrap/icheck-bootstrap.min.css">
+  <!-- JQVMap -->
+  <link rel="stylesheet" href="plugins/jqvmap/jqvmap.min.css">
+  <!-- Theme style -->
+  <link rel="stylesheet" href="dist/css/adminlte.min.css">
+  <!-- overlayScrollbars -->
+  <link rel="stylesheet" href="plugins/overlayScrollbars/css/OverlayScrollbars.min.css">
+  <!-- Daterange picker -->
+  <link rel="stylesheet" href="plugins/daterangepicker/daterangepicker.css">
+  <!-- summernote -->
+  <link rel="stylesheet" href="plugins/summernote/summernote-bs4.min.css">
+</head>
+<body class="hold-transition sidebar-mini layout-fixed">
+<div class="wrapper">
+
+  <!-- Preloader -->
+  <div class="preloader flex-column justify-content-center align-items-center">
+    <img src="dist/img/aa.gif" height="200" width="200">
+  </div>
+
+  <!-- Navbar -->
+  <nav class="main-header navbar navbar-expand navbar-white navbar-light">
+    <!-- Left navbar links -->
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
+      </li>
+      <li class="nav-item d-none d-sm-inline-block">
+        <a href="old1.html" class="nav-link">Home</a>
+      </li>
+    </ul>
+
+    <!-- Right navbar links -->
+    <ul class="navbar-nav ml-auto">
+      <!-- Navbar Search -->
+      
+
+      <!-- Messages Dropdown Menu -->
+
+      <!-- Notifications Dropdown Menu -->
+
+      <li class="nav-item">
+        <a class="nav-link" data-widget="fullscreen" href="#" role="button">
+          <i class="fas fa-expand-arrows-alt"></i>
+        </a>
+      </li>
+      
+    </ul>
+  </nav>
+  <!-- /.navbar -->
+
+  <!-- Main Sidebar Container -->
+  <aside class="main-sidebar sidebar-dark-primary elevation-4">
+    <!-- Brand Logo -->
+    <a href="#" class="brand-link">
+      <span class="brand-text font-weight-light">旅遊儀表板</span>
+    </a>
+
+    <!-- Sidebar -->
+    <div class="sidebar">
+      <!-- Sidebar user panel (optional) -->   
+      <!-- SidebarSearch Form -->    
+      <!-- Sidebar Menu -->
+      <nav class="mt-2">
+        <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
+          <!-- Add icons to the links using the .nav-icon class
+               with font-awesome or any other icon font library -->
+          <li class="nav-item menu-open">
+            <a href="#" class="nav-link">
+              <i class="nav-icon fas fa-tachometer-alt"></i>
+              <p>
+                銀髮族
+                <i class="right fas fa-angle-left"></i>
+              </p>
+            </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a href="./old1.html" class="nav-link active">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>銀髮族旅遊市場分析</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="./old.html" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>銀髮族旅遊行為分析</p>
+                </a>
+              </li>
+            </ul>
+          </li>   
+		  <li class="nav-item menu-open">
+            <a href="#" class="nav-link">
+              <i class="nav-icon fas fa-tachometer-alt"></i>
+              <p>
+                自然景觀景點
+                <i class="right fas fa-angle-left"></i>
+              </p>
+            </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a href="./natural1.html" class="nav-link ">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>TOP 5 台中自然景點</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="./natural.html" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>台中討論度最低的自然景觀景點</p>
+                </a>
+              </li>
+             
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a href="index.html" class="nav-link">
+              <p>
+                旅客分析
+              </p>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="index2.html" class="nav-link">
+              <p>
+                男女旅遊比較
+              </p>
+            </a>
+          </li>		  
+		  
+		  
+        </ul>		
+      </nav>	  
+      <!-- /.sidebar-menu -->
+    </div>
+    <!-- /.sidebar -->
+  </aside>
+
+  <!-- Content Wrapper. Contains page content -->
+  <div class="content-wrapper">
+    <!-- Content Header (Page header) -->
+    <div class="content-header">
+      <div class="container-fluid">
+        <div class="row mb-2">
+          <div class="col-sm-6">
+            <h1 class="m-0">銀髮族旅遊市場分析</h1>
+          </div><!-- /.col -->
+        </div><!-- /.row -->
+		<p class="m-0" >本頁儀表板在介紹65歲以上老年人人數的變化，會如何影響銀髮族旅遊在全部年齡層旅遊人數的占比，而人數的變化也會造成銀髮族旅遊花費的趨勢，而銀髮族要能出外旅遊，
+		需要經濟能力和健康的身體狀況，所以從老人狀況調查找出了65歲以上老年人的經濟狀況和生活自理能力的調查。</p><hr>
+      </div><!-- /.container-fluid -->
+    </div>
+    <!-- /.content-header -->
+
+    <!-- Main content -->
+    <section class="content">
+      <div class="container-fluid">
+        <!-- Small boxes (Stat box) -->
+        <div class="row">
+<div class="col-lg-3 col-6">
+            <!-- small box -->
+            <div class="small-box bg-danger">
+              <div class="inner">
+                <h3>2017年</h3><br>
+
+                <p>60歲以上老年人成為旅遊比率最高的族群</p>
+              </div>
+
+            </div>
+          </div>
+          <!-- ./col -->
+          <div class="col-lg-3 col-6">
+            <!-- small box -->
+            <div class="small-box bg-success">
+              <div class="inner">
+                <h3>2022年</h3><br>
+
+                <p>65歲以上人口數與0~19歲人口數形成黃金交叉</p>
+              </div>
+            </div>
+          </div>
+          <!-- ./col -->
+          <div class="col-lg-3 col-6">
+            <!-- small box -->
+            <div class="small-box bg-secondary">
+              <div class="inner">
+                <h3>2026年</h3><br>
+
+                <p>預估台灣2026年65歲以上人口數超過20%，進入超高齡化社會</p>
+              </div>
+            </div>
+          </div>
+           <div class="col-lg-3 col-6">
+            <!-- small box -->
+            <div class="small-box bg-info">
+              <div class="inner">
+                <h3>5%</h3><br>
+
+                <p>65歲以上老年人旅遊花費成長率</p>
+              </div>
+            </div>
+          </div>
+          <!-- ./col -->
+        </div>
+        <!-- /.row -->
+        <!-- Main row -->
+        <div class="row">
+          <!-- Left col -->
+          <section class="col-lg-6 connectedSortable">
+            <!-- Custom tabs (Charts with tabs)-->	
+			<div class="card card-info">
+              <div class="card-header">
+                <h3 class="card-title">歷年國人國內旅行按年齡統計</h3>
+
+                <div class="card-tools">
+                  <button type="button" class="btn btn-tool" data-card-widget="collapse">
+                    <i class="fas fa-minus"></i>
+                  </button>
+                  <button type="button" class="btn btn-tool" data-card-widget="remove">
+                    <i class="fas fa-times"></i>
+                  </button>
+                </div>
+              </div>
+              <div class="card-body">
+                <div class="chart">
+					<div class="flourish-embed flourish-bar-chart-race" data-src="visualisation/7479986"><script src="https://public.flourish.studio/resources/embed.js"></script></div>                
+				</div>
+              </div>
+              <!-- /.card-body -->
+            </div>
+		
+            <div class="card card-info">
+              <div class="card-header">
+                <h3 class="card-title">65歲以上人口數(人)</h3>
+
+                <div class="card-tools">
+                  <button type="button" class="btn btn-tool" data-card-widget="collapse">
+                    <i class="fas fa-minus"></i>
+                  </button>
+                  <button type="button" class="btn btn-tool" data-card-widget="remove">
+                    <i class="fas fa-times"></i>
+                  </button>
+                </div>
+              </div>
+              <div class="card-body">
+                <div class="chart">
+                  <div class="flourish-embed flourish-chart" data-src="visualisation/7695091"><script src="https://public.flourish.studio/resources/embed.js"></script></div>
+			  </div>
+              </div>
+              <!-- /.card-body -->
+            </div>
+            <!-- /.card -->
+
+            <!-- DIRECT CHAT -->
+            <div class="card card-info">
+              <div class="card-header">
+                <h3 class="card-title">65歲以上每月生活費</h3>
+
+                <div class="card-tools">
+                  <button type="button" class="btn btn-tool" data-card-widget="collapse">
+                    <i class="fas fa-minus"></i>
+                  </button>
+                  <button type="button" class="btn btn-tool" data-card-widget="remove">
+                    <i class="fas fa-times"></i>
+                  </button>
+                </div>
+              </div>
+              <div class="card-body">
+                <div class="chart">
+                  <div class="flourish-embed flourish-chart" data-src="visualisation/7769959"><script src="https://public.flourish.studio/resources/embed.js"></script></div>
+                </div>
+              </div>
+              <!-- /.card-body -->
+            </div>
+            <!--/.direct-chat -->
+
+            <!-- TO DO List -->
+            <!-- /.card -->
+          </section>
+          <!-- /.Left col -->
+          <!-- right col (We are only adding the ID to make the widgets sortable)-->
+          <section class="col-lg-6 connectedSortable">
+
+            <!-- Map card -->
+			 <div class="card card-info">
+              <div class="card-header">銀髮族旅遊花費</h3>
+
+                <div class="card-tools">
+                  <button type="button" class="btn btn-tool" data-card-widget="collapse">
+                    <i class="fas fa-minus"></i>
+                  </button>
+                  <button type="button" class="btn btn-tool" data-card-widget="remove">
+                    <i class="fas fa-times"></i>
+                  </button>
+                </div>
+              </div>
+              <div class="card-body">
+                <div class="chart">
+				<div class="flourish-embed flourish-chart" data-src="visualisation/7211008"><script src="https://public.flourish.studio/resources/embed.js"></script></div>
+			</div>
+              </div>			  
+              <!-- /.card-body -->
+            </div>
+			
+            <div class="card card-info">
+              <div class="card-header">
+                <h3 class="card-title">65歲以上人口數(比率)</h3>
+
+                <div class="card-tools">
+                  <button type="button" class="btn btn-tool" data-card-widget="collapse">
+                    <i class="fas fa-minus"></i>
+                  </button>
+                  <button type="button" class="btn btn-tool" data-card-widget="remove">
+                    <i class="fas fa-times"></i>
+                  </button>
+                </div>
+              </div>
+              <div class="card-body">
+                <div class="chart">
+                  <div class="flourish-embed flourish-chart" data-src="visualisation/7695117"><script src="https://public.flourish.studio/resources/embed.js"></script></div>
+			  </div>
+              </div>
+              <!-- /.card-body -->
+            </div>
+            <!-- /.card -->
+
+            <!-- solid sales graph -->
+			<div class="card card-info">
+              <div class="card-header">
+                <h3 class="card-title">65歲以上日常生活活動能力</h3>
+
+                <div class="card-tools">
+                  <button type="button" class="btn btn-tool" data-card-widget="collapse">
+                    <i class="fas fa-minus"></i>
+                  </button>
+                  <button type="button" class="btn btn-tool" data-card-widget="remove">
+                    <i class="fas fa-times"></i>
+                  </button>
+                </div>
+              </div>
+              <div class="card-body">
+                <div class="chart">
+                  <div class="flourish-embed flourish-chart" data-src="visualisation/7765130"><script src="https://public.flourish.studio/resources/embed.js"></script></div>
+                </div>
+              </div>
+              <!-- /.card-body -->
+            </div>
+            <!-- /.card -->
+
+            <!-- Calendar -->
+            <!-- /.card -->
+          </section>
+          <!-- right col -->
+        </div>
+        <!-- /.row (main row) -->
+      </div><!-- /.container-fluid -->
+    </section>
+    <!-- /.content -->
+  </div>
+  <!-- /.content-wrapper -->
+
+  <!-- Control Sidebar -->
+  <aside class="control-sidebar control-sidebar-dark">
+    <!-- Control sidebar content goes here -->
+  </aside>
+  <!-- /.control-sidebar -->
+</div>
+<!-- ./wrapper -->
+
+<!-- jQuery -->
+<script src="plugins/jquery/jquery.min.js"></script>
+<!-- jQuery UI 1.11.4 -->
+<script src="plugins/jquery-ui/jquery-ui.min.js"></script>
+<!-- Resolve conflict in jQuery UI tooltip with Bootstrap tooltip -->
+<script>
+  $.widget.bridge('uibutton', $.ui.button)
+</script>
+<!-- Bootstrap 4 -->
+<script src="plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+<!-- ChartJS -->
+<script src="plugins/chart.js/Chart.min.js"></script>
+<!-- Sparkline -->
+<script src="plugins/sparklines/sparkline.js"></script>
+<!-- JQVMap -->
+<script src="plugins/jqvmap/jquery.vmap.min.js"></script>
+<script src="plugins/jqvmap/maps/jquery.vmap.usa.js"></script>
+<!-- jQuery Knob Chart -->
+<script src="plugins/jquery-knob/jquery.knob.min.js"></script>
+<!-- daterangepicker -->
+<script src="plugins/moment/moment.min.js"></script>
+<script src="plugins/daterangepicker/daterangepicker.js"></script>
+<!-- Tempusdominus Bootstrap 4 -->
+<script src="plugins/tempusdominus-bootstrap-4/js/tempusdominus-bootstrap-4.min.js"></script>
+<!-- Summernote -->
+<script src="plugins/summernote/summernote-bs4.min.js"></script>
+<!-- overlayScrollbars -->
+<script src="plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js"></script>
+<!-- AdminLTE App -->
+<script src="dist/js/adminlte.js"></script>
+<!-- AdminLTE for demo purposes -->
+<script src="dist/js/demo.js"></script>
+<!-- AdminLTE dashboard demo (This is only for demo purposes) -->
+<script src="dist/js/pages/dashboard.js"></script>
+<script>
+$(function () {
+    var lineChartCanvas = $('#numberChart').get(0).getContext('2d')
+    var lineChartOptions ={
+      maintainAspectRatio : false,
+      responsive : true,
+      legend: {
+        display: true
+      },
+      scales: {
+        xAxes: [{
+          gridLines : {
+            display : false,
+          }
+        }],
+        yAxes: [{
+          gridLines : {
+            display : false,
+          }
+        }]
+      }
+    }
+    var lineChartData = {
+      labels  : ['2010', '2011', '2012', '2013', '2014', '2015', '2016'],
+      datasets: [
+        {
+          label               : '65歲以上人口數(人)',
+          backgroundColor     : 'rgba(60,141,188,0.9)',
+          borderColor         : 'rgba(60,141,188,0.8)',
+          pointRadius          : false,
+          pointColor          : '#3b8bba',
+          pointStrokeColor    : 'rgba(60,141,188,1)',
+          pointHighlightFill  : '#fff',
+          pointHighlightStroke: 'rgba(60,141,188,1)',
+          data                : [2487893, 2528249, 2600152, 2694406, 2808690, 2938579, 3106105]
+        },
+        {
+          label               : '0~19歲人口數(人)',
+          backgroundColor     : 'rgba(210, 214, 222, 1)',
+          borderColor         : 'rgba(210, 214, 222, 1)',
+          pointRadius         : false,
+          pointColor          : 'rgba(210, 214, 222, 1)',
+          pointStrokeColor    : '#c1c7d1',
+          pointHighlightFill  : '#fff',
+          pointHighlightStroke: 'rgba(220,220,220,1)',
+          data                : [5232465, 5114027, 5027202, 4903553, 4795101, 4687615, 4576657]
+        },
+      ]
+    }
+    lineChartData.datasets[0].fill = false;
+    lineChartData.datasets[1].fill = false;
+    lineChartOptions.datasetFill = false
+
+    var lineChart = new Chart(lineChartCanvas, {
+      type: 'line',
+      data: lineChartData,
+      options: lineChartOptions
+    })
+	
+	
+	var rateChartCanvas = $('#rateChart').get(0).getContext('2d')
+    var rateChartOptions =$.extend(true, {}, lineChartOptions)
+    var rateChartData = {
+      labels  : ['2010', '2011', '2012', '2013', '2014', '2015', '2016'],
+      datasets: [
+        {
+          label               : '65歲以上人口數(人)',
+          backgroundColor     : 'rgba(60,141,188,0.9)',
+          borderColor         : 'rgba(60,141,188,0.8)',
+          pointRadius          : false,
+          pointColor          : '#3b8bba',
+          pointStrokeColor    : 'rgba(60,141,188,1)',
+          pointHighlightFill  : '#fff',
+          pointHighlightStroke: 'rgba(60,141,188,1)',
+          data                : [2487893, 2528249, 2600152, 2694406, 2808690, 2938579, 3106105]
+        },
+        {
+          label               : '0~19歲人口數(人',
+          backgroundColor     : 'rgba(210, 214, 222, 1)',
+          borderColor         : 'rgba(210, 214, 222, 1)',
+          pointRadius         : false,
+          pointColor          : 'rgba(210, 214, 222, 1)',
+          pointStrokeColor    : '#c1c7d1',
+          pointHighlightFill  : '#fff',
+          pointHighlightStroke: 'rgba(220,220,220,1)',
+          data                : [5232465, 5114027, 5027202, 4903553, 4795101, 4687615, 4576657]
+        },
+      ]
+    }
+    rateChartData.datasets[0].fill = false;
+    rateChartData.datasets[1].fill = false;
+    rateChartOptions.datasetFill = false
+	new Chart(rateChartCanvas, {
+      type: 'line',
+      data: rateChartData,
+      options: rateChartOptions
+    })
+	
+	var AChartCanvas = $('#AChart').get(0).getContext('2d')
+    var AChartOptions =$.extend(true, {}, lineChartOptions)
+    var AChartData = {
+      labels  : ['2010', '2011', '2012', '2013', '2014', '2015', '2016'],
+      datasets: [
+        {
+          label               : '65歲以上人口數(人)',
+          backgroundColor     : 'rgba(60,141,188,0.9)',
+          borderColor         : 'rgba(60,141,188,0.8)',
+          pointRadius          : false,
+          pointColor          : '#3b8bba',
+          pointStrokeColor    : 'rgba(60,141,188,1)',
+          pointHighlightFill  : '#fff',
+          pointHighlightStroke: 'rgba(60,141,188,1)',
+          data                : [2487893, 2528249, 2600152, 2694406, 2808690, 2938579, 3106105]
+        },
+        {
+          label               : '0~19歲人口數(人',
+          backgroundColor     : 'rgba(210, 214, 222, 1)',
+          borderColor         : 'rgba(210, 214, 222, 1)',
+          pointRadius         : false,
+          pointColor          : 'rgba(210, 214, 222, 1)',
+          pointStrokeColor    : '#c1c7d1',
+          pointHighlightFill  : '#fff',
+          pointHighlightStroke: 'rgba(220,220,220,1)',
+          data                : [5232465, 5114027, 5027202, 4903553, 4795101, 4687615, 4576657]
+        },
+      ]
+    }
+    AChartData.datasets[0].fill = false;
+    AChartData.datasets[1].fill = false;
+    AChartOptions.datasetFill = false
+	new Chart(AChartCanvas, {
+      type: 'line',
+      data: AChartData,
+      options: AChartOptions
+    })
+	
+	var BChartCanvas = $('#BChart').get(0).getContext('2d')
+    var BChartOptions =$.extend(true, {}, lineChartOptions)
+    var BChartData = {
+      labels  : ['2010', '2011', '2012', '2013', '2014', '2015', '2016'],
+      datasets: [
+        {
+          label               : '65歲以上人口數(人)',
+          backgroundColor     : 'rgba(60,141,188,0.9)',
+          borderColor         : 'rgba(60,141,188,0.8)',
+          pointRadius          : false,
+          pointColor          : '#3b8bba',
+          pointStrokeColor    : 'rgba(60,141,188,1)',
+          pointHighlightFill  : '#fff',
+          pointHighlightStroke: 'rgba(60,141,188,1)',
+          data                : [2487893, 2528249, 2600152, 2694406, 2808690, 2938579, 3106105]
+        },
+        {
+          label               : '0~19歲人口數(人',
+          backgroundColor     : 'rgba(210, 214, 222, 1)',
+          borderColor         : 'rgba(210, 214, 222, 1)',
+          pointRadius         : false,
+          pointColor          : 'rgba(210, 214, 222, 1)',
+          pointStrokeColor    : '#c1c7d1',
+          pointHighlightFill  : '#fff',
+          pointHighlightStroke: 'rgba(220,220,220,1)',
+          data                : [5232465, 5114027, 5027202, 4903553, 4795101, 4687615, 4576657]
+        },
+      ]
+    }
+    BChartData.datasets[0].fill = false;
+    BChartData.datasets[1].fill = false;
+    BChartOptions.datasetFill = false
+	new Chart(BChartCanvas, {
+      type: 'line',
+      data: BChartData,
+      options: BChartOptions
+    })
+	
+	var CChartCanvas = $('#CChart').get(0).getContext('2d')
+    var CChartOptions =$.extend(true, {}, lineChartOptions)
+    var CChartData = {
+      labels  : ['2010', '2011', '2012', '2013', '2014', '2015', '2016'],
+      datasets: [
+        {
+          label               : '65歲以上人口數(人)',
+          backgroundColor     : 'rgba(60,141,188,0.9)',
+          borderColor         : 'rgba(60,141,188,0.8)',
+          pointRadius          : false,
+          pointColor          : '#3b8bba',
+          pointStrokeColor    : 'rgba(60,141,188,1)',
+          pointHighlightFill  : '#fff',
+          pointHighlightStroke: 'rgba(60,141,188,1)',
+          data                : [2487893, 2528249, 2600152, 2694406, 2808690, 2938579, 3106105]
+        },
+        {
+          label               : '0~19歲人口數(人',
+          backgroundColor     : 'rgba(210, 214, 222, 1)',
+          borderColor         : 'rgba(210, 214, 222, 1)',
+          pointRadius         : false,
+          pointColor          : 'rgba(210, 214, 222, 1)',
+          pointStrokeColor    : '#c1c7d1',
+          pointHighlightFill  : '#fff',
+          pointHighlightStroke: 'rgba(220,220,220,1)',
+          data                : [5232465, 5114027, 5027202, 4903553, 4795101, 4687615, 4576657]
+        },
+      ]
+    }
+    CChartData.datasets[0].fill = false;
+    CChartData.datasets[1].fill = false;
+    CChartOptions.datasetFill = false
+	new Chart(CChartCanvas, {
+      type: 'line',
+      data: CChartData,
+      options: CChartOptions
+    })
+	
+	
+	var DChartCanvas = $('#DChart').get(0).getContext('2d')
+    var DChartOptions =$.extend(true, {}, lineChartOptions)
+    var DChartData = {
+      labels  : ['2010', '2011', '2012', '2013', '2014', '2015', '2016'],
+      datasets: [
+        {
+          label               : '65歲以上人口數(人)',
+          backgroundColor     : 'rgba(60,141,188,0.9)',
+          borderColor         : 'rgba(60,141,188,0.8)',
+          pointRadius          : false,
+          pointColor          : '#3b8bba',
+          pointStrokeColor    : 'rgba(60,141,188,1)',
+          pointHighlightFill  : '#fff',
+          pointHighlightStroke: 'rgba(60,141,188,1)',
+          data                : [2487893, 2528249, 2600152, 2694406, 2808690, 2938579, 3106105]
+        },
+        {
+          label               : '0~19歲人口數(人',
+          backgroundColor     : 'rgba(210, 214, 222, 1)',
+          borderColor         : 'rgba(210, 214, 222, 1)',
+          pointRadius         : false,
+          pointColor          : 'rgba(210, 214, 222, 1)',
+          pointStrokeColor    : '#c1c7d1',
+          pointHighlightFill  : '#fff',
+          pointHighlightStroke: 'rgba(220,220,220,1)',
+          data                : [5232465, 5114027, 5027202, 4903553, 4795101, 4687615, 4576657]
+        },
+      ]
+    }
+    DChartData.datasets[0].fill = false;
+    DChartData.datasets[1].fill = false;
+    DChartOptions.datasetFill = false
+	new Chart(DChartCanvas, {
+      type: 'line',
+      data: DChartData,
+      options: DChartOptions
+    })
+})
+</script>
+</body>
+</html>

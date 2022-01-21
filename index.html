@@ -1,0 +1,951 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>旅客分析</title>
+  <link rel="stylesheet" type="text/css" media="screen" href="plugins/localstorage/main.css" />
+  <!-- Google Font: Source Sans Pro -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="plugins/fontawesome-free/css/all.min.css">
+  <!-- overlayScrollbars -->
+  <link rel="stylesheet" href="plugins/overlayScrollbars/css/OverlayScrollbars.min.css">
+  <!-- Theme style -->
+  <link rel="stylesheet" href="dist/css/adminlte.min.css">
+</head>
+<body class="hold-transition dark-mode sidebar-mini layout-fixed layout-navbar-fixed layout-footer-fixed">
+<div class="wrapper">
+
+  <!-- Preloader -->
+  <div class="preloader flex-column justify-content-center align-items-center">
+    <img src="dist/img/aa.gif" height="200" width="200">
+  </div>
+
+  <!-- Navbar -->
+  <nav class="main-header navbar navbar-expand navbar-dark">
+    <!-- Left navbar links -->
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
+      </li>
+      <li class="nav-item d-none d-sm-inline-block">
+        <a href="old1.html" class="nav-link">Home</a>
+      </li>
+    </ul>
+
+    <!-- Right navbar links -->
+    <ul class="navbar-nav ml-auto">
+      <!-- Navbar Search -->
+
+      <!-- Notifications Dropdown Menu -->
+      <li class="nav-item">
+        <a class="nav-link" data-widget="fullscreen" href="#" role="button">
+          <i class="fas fa-expand-arrows-alt"></i>
+        </a>
+      </li>
+    </ul>
+  </nav>
+  <!-- /.navbar -->
+
+  <!-- Main Sidebar Container -->
+  <aside class="main-sidebar sidebar-dark-primary elevation-4">
+    <!-- Brand Logo -->
+    <a href="#" class="brand-link">
+      <span class="brand-text font-weight-light">旅遊儀表板</span>
+    </a>
+
+    <!-- Sidebar -->
+    <div class="sidebar">
+
+
+
+      <!-- Sidebar Menu -->
+      <nav class="mt-2">
+        <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
+          <!-- Add icons to the links using the .nav-icon class
+               with font-awesome or any other icon font library -->
+          <li class="nav-item menu-open">
+            <a href="#" class="nav-link">
+              <i class="nav-icon fas fa-tachometer-alt"></i>
+              <p>
+                銀髮族
+                <i class="right fas fa-angle-left"></i>
+              </p>
+            </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a href="./old1.html" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>銀髮族旅遊市場分析</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="./old.html" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>銀髮族旅遊行為分析</p>
+                </a>
+              </li>
+            </ul>
+          </li>
+		      <li class="nav-item menu-open">
+            <a href="#" class="nav-link">
+              <i class="nav-icon fas fa-tachometer-alt"></i>
+              <p>
+                自然景觀景點
+                <i class="right fas fa-angle-left"></i>
+              </p>
+            </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a href="./natural1.html" class="nav-link ">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>TOP 5 台中自然景點</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="./natural.html" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>台中討論度最低的自然景觀景點</p>
+                </a>
+              </li>
+             
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a href="index.html" class="nav-link active">
+              <p>
+                旅客分析
+              </p>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="index2.html" class="nav-link">
+              <p>
+                男女旅遊比較
+              </p>
+            </a>
+          </li>
+
+        </ul>
+      </nav>
+      <!-- /.sidebar-menu -->
+    </div>
+    <!-- /.sidebar -->
+  </aside>
+
+  <!-- Content Wrapper. Contains page content -->
+  <div class="content-wrapper">
+    <!-- Content Header (Page header) -->
+    <div class="content-header">
+      <div class="container-fluid">
+        <div class="row mb-2">
+          <div class="col-12">
+            <h1 class="m-0">旅客分析</h1>
+			<font size='2'>本頁面為來台旅客分析以及探討產值與其相關，首先是藉由各大洲來區分的各洲旅客來源，由程式自動地跑出圖以及比較排名、成長率等資訊，
+			淺顯易懂的將各大洲主要旅客來源表現出來，圖表下方則逐一呈現重點摘要之相關詳細數據說明。接著來到以國家區分的旅客來源，可以看到與前一圖之來源有相對應之處，並且一樣
+			列出成長率以及排名，並另外加入了相交的表現，其相交點的重要性尤為重要，或許可以推測該段時間各國家或許配合相對應政策或是疫情等等而造成變化。最後一圖為
+			歷年產值，除了成長率以及排名外，因為只有單線的原因，將正負交界點也跑出來，提供轉折點供參考。本頁面希望透過分析旅客並找出其相關性，觀看過去的變化，
+			希望利用此儀表板，可以立即將資訊查證，有助檢討年度政策，並幫助決策支援。</font>
+          </div><!-- /.col -->
+          <div class="col-sm-6">
+
+          </div><!-- /.col -->
+        </div><!-- /.row -->
+      </div><!-- /.container-fluid -->
+    </div>
+    <!-- /.content-header -->	
+    <!-- Main content -->
+    <section class="content">
+      <div class="container-fluid">
+        <!-- Info boxes -->
+        <div class="row">
+          <div class="col-12 col-sm-6 col-md-3">
+            <div class="info-box">
+              <span class="info-box-icon bg-info elevation-1"><i class="far fa-arrow-alt-circle-up"></i></span>
+
+              <div class="info-box-content">
+                <span class="info-box-text">2013-2014</span>
+                <span class="info-box-text">總體成長</span>
+              </div>
+              <!-- /.info-box-content -->
+            </div>
+            <!-- /.info-box -->
+          </div>
+          <!-- /.col -->
+          <div class="col-12 col-sm-6 col-md-3">
+            <div class="info-box mb-3">
+              <span class="info-box-icon bg-danger elevation-1"><i class="far fa-arrow-alt-circle-down"></i></span>
+
+              <div class="info-box-content">
+                <span class="info-box-text">2019-2020</span>
+                <span class="info-box-text">總體下降</span>
+              </div>
+              <!-- /.info-box-content -->
+            </div>
+            <!-- /.info-box -->
+          </div>
+          <!-- /.col -->
+
+          <!-- fix for small devices only -->
+          <div class="clearfix hidden-md-up"></div>
+
+          <div class="col-12 col-sm-6 col-md-3">
+            <div class="info-box mb-3">
+              <span class="info-box-icon bg-success elevation-1"><i class="fas fa-id-card"></i></span>
+
+              <div class="info-box-content">
+                <span class="info-box-text">旅客區域</span>
+                <span class="info-box-text">亞洲</span>
+              </div>
+              <!-- /.info-box-content -->
+            </div>
+            <!-- /.info-box -->
+          </div>
+          <!-- /.col -->
+          <div class="col-12 col-sm-6 col-md-3">
+            <div class="info-box mb-3">
+              <span class="info-box-icon bg-yellow elevation-1"><i class="fas fa-id-card"></i></span>
+
+              <div class="info-box-content">
+                <span class="info-box-text">旅客國家</span>
+                <span class="info-box-text">中國</span>
+              </div>
+              <!-- /.info-box-content -->
+            </div>
+            <!-- /.info-box -->
+          </div>
+          <!-- /.col -->
+        </div>
+        <!-- /.row -->
+
+        <div class="row">
+          <div class="col-md-12">
+            <div class="card">
+              <div class="card-header">
+                <h5 class="card-title">各洲旅客來源</h5>
+                <div class="card-tools">
+                  <button type="button" class="btn btn-tool" data-card-widget="collapse">
+                    <i class="fas fa-minus"></i>
+                  </button>
+                  <div class="btn-group">
+                    <button type="button" class="btn btn-tool dropdown-toggle" data-toggle="dropdown">
+                      <i class="fas fa-wrench"></i>
+                    </button>
+                    <div class="dropdown-menu dropdown-menu-right" role="menu">
+                      <a href="#" class="dropdown-item">Action</a>
+                      <a href="#" class="dropdown-item">Another action</a>
+                      <a href="#" class="dropdown-item">Something else here</a>
+                      <a class="dropdown-divider"></a>
+                      <a href="#" class="dropdown-item">Separated link</a>
+                    </div>
+                  </div>
+                  <button type="button" class="btn btn-tool" data-card-widget="remove">
+                    <i class="fas fa-times"></i>
+                  </button>
+                </div>
+              </div>
+              <!-- /.card-header -->
+              <div class="card-body">
+                <div class="row">
+                  <div class="col-md-8">
+                    <p class="text-center">
+                      <strong>2011-2020</strong>
+                    </p>
+
+                    <div class="chart">
+                      <!-- Sales Chart Canvas -->
+                      <canvas id="lineChart" height="180" style="height: 180px;"></canvas>
+                    </div>
+                    <!-- /.chart-responsive -->
+                  </div>
+                  <!-- /.col -->
+                  <div class="col-md-4">
+                    <p class="text-center">
+                      <strong>重點摘要</strong>
+                    </p>
+
+                    <div class="progress-group">
+                      第一名
+                      <b>亞洲</b>
+
+                    </div>
+                    <!-- /.progress-group -->
+
+                    <div class="progress-group">
+                      上升最高
+                      <b>2013-2014</b>
+
+                    </div>
+
+                    <!-- /.progress-group -->
+                    <div class="progress-group">
+						下降最高
+						<b>2019-2020</b>
+                    </div>
+
+                    <!-- /.progress-group -->
+                    <div class="progress-group">
+						<b>2011-2019亞洲接維持正成長</b>
+                    </div>
+                    <!-- /.progress-group -->
+                  </div>
+                  <!-- /.col -->
+                </div>
+                <!-- /.row -->
+              </div>
+              <!-- ./card-body -->
+              <div class="card-footer">
+                <div class="row">
+                  <div class="col-sm-4 col-6">
+                    <div class="description-block border-right">
+                      <span class="description-percentage text-success"><i class="fas fa-caret-up"></i> 25.65%</span>
+                      <h5 class="description-header">2013-2014</h5>
+                      <span class="description-text">亞洲成長率MAX</span>
+                    </div>
+                    <!-- /.description-block -->
+                  </div>
+                  <!-- /.col -->
+                  <div class="col-sm-4 col-6">
+                    <div class="description-block border-right">
+                      <span class="description-percentage text-success"><i class="fas fa-caret-up"></i> 100.6%</span>
+                      <h5 class="description-header">2011-2019</h5>
+                      <span class="description-text">亞洲總成長率</span>
+                    </div>
+                    <!-- /.description-block -->
+                  </div>
+                  <!-- /.col -->
+                  <div class="col-sm-4 col-6">
+                    <div class="description-block border-right">
+                      <span class="description-percentage text-danger"><i class="fas fa-caret-down"></i> 88.79%</span>
+                      <h5 class="description-header">2019-2020</h5>
+                      <span class="description-text">亞洲下降率MAX</span>
+                    </div>
+                    <!-- /.description-block -->
+                  </div>
+
+                    <!-- /.description-block -->
+                  </div>
+                </div>
+                <!-- /.row -->
+              </div>
+              <!-- /.card-footer -->
+            </div>
+            <!-- /.card -->
+          </div>
+          <!-- /.col -->
+        </div>
+        <!-- /.row -->
+        <div class="row">
+          <div class="col-md-12">
+            <div class="card">
+              <div class="card-header">
+                <h5 class="card-title">各國旅客來源</h5>
+
+                <div class="card-tools">
+                  <button type="button" class="btn btn-tool" data-card-widget="collapse">
+                    <i class="fas fa-minus"></i>
+                  </button>
+                  <div class="btn-group">
+                    <button type="button" class="btn btn-tool dropdown-toggle" data-toggle="dropdown">
+                      <i class="fas fa-wrench"></i>
+                    </button>
+                    <div class="dropdown-menu dropdown-menu-right" role="menu">
+                      <a href="#" class="dropdown-item">Action</a>
+                      <a href="#" class="dropdown-item">Another action</a>
+                      <a href="#" class="dropdown-item">Something else here</a>
+                      <a class="dropdown-divider"></a>
+                      <a href="#" class="dropdown-item">Separated link</a>
+                    </div>
+                  </div>
+                  <button type="button" class="btn btn-tool" data-card-widget="remove">
+                    <i class="fas fa-times"></i>
+                  </button>
+                </div>
+              </div>
+              <!-- /.card-header -->
+              <div class="card-body">
+                <div class="row">
+                  <div class="col-md-8">
+                    <p class="text-center">
+                      <strong>2011-2020</strong>
+                    </p>
+
+                    <div class="chart">
+                      <!-- Sales Chart Canvas -->
+                      <canvas id="lineChart2" height="200" style="height: 200px;"></canvas>
+                    </div>
+                    <!-- /.chart-responsive -->
+                  </div>
+                  <!-- /.col -->
+                  <div class="col-md-4">
+                    <p class="text-center">
+                      <strong>重點摘要</strong>
+                    </p>
+
+                    <div class="progress-group">
+                      第一名
+                      <b>中國</b>
+
+                    </div>
+                    <!-- /.progress-group -->
+
+                    <div class="progress-group">
+                      上升最高
+                      <b>2013-2014</b>
+
+                    </div>
+
+                    <!-- /.progress-group -->
+                    <div class="progress-group">
+						下降最高
+						<b>2019-2020</b>
+                    </div>
+
+                    <!-- /.progress-group -->
+                    <div class="progress-group">
+						<b>香港和中國大陸在2019至2020相交</b><br>
+						<b>香港和韓國在2019至2020相交</b><br>
+						<b>中國大陸和日本在2019至2020相交</b><br>
+						<b>中國大陸和韓國在2019至2020相交</b><br>
+						<b>中國大陸和其他在2016至2017相交</b><br>
+						<b>韓國和馬來西亞在2013至2014相交</b>
+                    </div>					
+                    <!-- /.progress-group -->
+                  </div>
+                  <!-- /.col -->
+                </div>
+                <!-- /.row -->
+              </div>
+              <!-- ./card-body -->
+              <div class="card-footer">
+                <div class="row">
+                  <div class="col-sm-3 col-6">
+                    <div class="description-block border-right">
+                      <span class="description-percentage text-success"><i class="fas fa-caret-up"></i> 38.70%</span>
+                      <h5 class="description-header">2013-2014</h5>
+                      <span class="description-text">中國成長率MAX</span>
+                    </div>
+                    <!-- /.description-block -->
+                  </div>
+                  <!-- /.col -->
+                  <div class="col-sm-3 col-6">
+                    <div class="description-block border-right">
+                      <span class="description-percentage text-danger"><i class="fas fa-caret-down"></i> 95.91%</span>
+                      <h5 class="description-header">2019-2020</h5>
+                      <span class="description-text">中國下降率MAX</span>
+                    </div>
+                    <!-- /.description-block -->
+                  </div>
+                  <!-- /.col -->
+                  <div class="col-sm-3 col-6">
+                    <div class="description-block border-right">
+                      <span class="description-percentage text-success"><i class="fas fa-caret-up"></i> 16.50%</span>
+                      <h5 class="description-header">2015-2016</h5>
+                      <span class="description-text">日本成長率MAX</span>
+                    </div>
+                    <!-- /.description-block -->
+                  </div>
+				  <div class="col-sm-3 col-6">
+                    <div class="description-block border-right">
+                      <span class="description-percentage text-danger"><i class="fas fa-caret-down"></i> 87.56%</span>
+                      <h5 class="description-header">2019-2020</h5>
+                      <span class="description-text">日本下降率MAX</span>
+                    </div>
+                    <!-- /.description-block -->
+                  </div>
+
+                    <!-- /.description-block -->
+                  </div>
+                
+                <!-- /.row -->
+              </div>
+              <!-- /.card-footer -->
+            </div>
+            <!-- /.card -->
+          </div>
+          <!-- /.col -->
+        </div>
+        <div class="row">
+          <div class="col-md-12">
+            <div class="card">
+              <div class="card-header">
+                <h5 class="card-title">歷年產值(美元)</h5>
+
+                <div class="card-tools">
+                  <button type="button" class="btn btn-tool" data-card-widget="collapse">
+                    <i class="fas fa-minus"></i>
+                  </button>
+                  <div class="btn-group">
+                    <button type="button" class="btn btn-tool dropdown-toggle" data-toggle="dropdown">
+                      <i class="fas fa-wrench"></i>
+                    </button>
+                    <div class="dropdown-menu dropdown-menu-right" role="menu">
+                      <a href="#" class="dropdown-item">Action</a>
+                      <a href="#" class="dropdown-item">Another action</a>
+                      <a href="#" class="dropdown-item">Something else here</a>
+                      <a class="dropdown-divider"></a>
+                      <a href="#" class="dropdown-item">Separated link</a>
+                    </div>
+                  </div>
+                  <button type="button" class="btn btn-tool" data-card-widget="remove">
+                    <i class="fas fa-times"></i>
+                  </button>
+                </div>
+              </div>
+              <!-- /.card-header -->
+              <div class="card-body">
+                <div class="row">
+                  <div class="col-md-8">
+                    <p class="text-center">
+                      <strong>2011-2020</strong>
+                    </p>
+
+                    <div class="chart">
+                      <!-- Sales Chart Canvas -->
+                      <canvas id="lineChart3" height="180" style="height: 180px;"></canvas>
+                    </div>
+                    <!-- /.chart-responsive -->
+                  </div>
+                  <!-- /.col -->
+                  <div class="col-md-4">
+                    <p class="text-center">
+                      <strong>重點摘要</strong>
+                    </p>
+
+                    <div class="progress-group">
+                      最高年份
+                      <b>2014</b>
+
+                    </div>
+					<div class="progress-group">
+                      成長率正負交替
+                      <b>2014、2017</b>
+
+                    </div>
+                    <!-- /.progress-group -->
+
+                    <div class="progress-group">
+                      上升最高
+                      <b>2013-2014</b>
+
+                    </div>
+
+                    <!-- /.progress-group -->
+                    <div class="progress-group">
+						下降最高
+						<b>2019-2020</b>
+                    </div>
+                  </div>
+                  <!-- /.col -->
+                </div>
+                <!-- /.row -->
+              </div>
+              <!-- ./card-body -->
+              <div class="card-footer">
+                <div class="row">
+                  <div class="col-sm-6 col-6">
+                    <div class="description-block border-right">
+                      <span class="description-percentage text-success"><i class="fas fa-caret-up"></i> 18.60%</span>
+                      <h5 class="description-header">2013-2014</h5>
+                      <span class="description-text">成長率MAX</span>
+                    </div>
+                    <!-- /.description-block -->
+                  </div>
+                  <!-- /.col -->
+                  <div class="col-sm-6 col-6">
+                    <div class="description-block border-right">
+                      <span class="description-percentage text-danger"><i class="fas fa-caret-down"></i> 88.09%</span>
+                      <h5 class="description-header">2019-2020</h5>
+                      <span class="description-text">下降率MAX</span>
+                    </div>
+                    <!-- /.description-block -->
+                  </div>
+              
+
+                    <!-- /.description-block -->
+                  </div>
+                
+                <!-- /.row -->
+              </div>
+              <!-- /.card-footer -->
+            </div>
+            <!-- /.card -->
+          </div>
+          <!-- /.col -->
+        </div>
+		<div class="container">
+			<h1>筆記區</h1>
+			<form id=displayform>
+			  <input type="text" name='wish' placeholder="輸入筆記資源" required maxlength="100">
+			  <input type="submit" value="確定">
+			</form>
+			<ul id=display>
+			  <!--Display wishes here-->
+			</ul>
+		</div>
+		
+		
+
+		
+		
+
+
+<!-- ./wrapper -->
+<script src="plugins/localstorage/main1.js"></script>
+<!-- REQUIRED SCRIPTS -->
+<!-- jQuery -->
+<script src="plugins/jquery/jquery.min.js"></script>
+<!-- Bootstrap -->
+<script src="plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+<!-- overlayScrollbars -->
+<script src="plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js"></script>
+<!-- AdminLTE App -->
+<script src="dist/js/adminlte.js"></script>
+
+<!-- PAGE PLUGINS -->
+<!-- jQuery Mapael -->
+<script src="plugins/jquery-mousewheel/jquery.mousewheel.js"></script>
+<script src="plugins/raphael/raphael.min.js"></script>
+<script src="plugins/jquery-mapael/jquery.mapael.min.js"></script>
+<script src="plugins/jquery-mapael/maps/usa_states.min.js"></script>
+<!-- ChartJS -->
+<script src="plugins/chart.js/Chart.min.js"></script>
+
+<!-- AdminLTE for demo purposes -->
+<script src="dist/js/demo.js"></script>
+<!-- AdminLTE dashboard demo (This is only for demo purposes) -->
+<script src="dist/js/pages/dashboard2.js"></script>
+<script>
+  $(function () {
+    /* ChartJS
+     * -------
+     * Here we will create a few charts using ChartJS
+     */
+	
+    //-------------
+    //- LINE CHART -
+    //--------------
+    var lineChartCanvas = $('#lineChart').get(0).getContext('2d')
+    var lineChartOptions = {
+      maintainAspectRatio : false,
+      responsive : true,
+      legend: {
+        display: true,
+		labels:{
+			fontColor:'white'
+		}		
+      },
+      scales: {
+        xAxes: [{
+          gridLines : {
+            display : true,
+          },
+		  ticks:{
+			fontColor: 'white'		  
+		  },
+        }],
+        yAxes: [{
+          gridLines : {
+            display : true,
+          },
+		  ticks:{
+			fontColor: 'white'		  
+		  },
+        }]
+      }
+    }
+	var lineChartData = {
+		  labels  : ['2011', '2012', '2013', '2014', '2015', '2016', '2017','2018','2019','2020'],
+		  datasets: [
+			{
+			  label               : '亞洲',
+			  backgroundColor     : 'rgba(0, 255, 242,0.9)',
+			  borderColor         : 'rgba(0, 255, 242,0.8)',
+			  pointRadius          : false,
+			  pointColor          : '#3b8bba',
+			  pointStrokeColor    : 'rgba(0, 255, 242,1)',
+			  pointHighlightFill  : '#fff',
+			  pointHighlightStroke: 'rgba(0, 255, 242,1)',
+			  data                : [5264210, 6473684, 7138786,8970186,9469559,9624793,9585635,9845761,10561699,1183987]
+			},
+			{
+			  label               : '非洲',
+			  backgroundColor     : 'rgba(255, 0, 4, 1)',
+			  borderColor         : 'rgba(255, 0, 4, 1)',
+			  pointRadius         : false,
+			  pointColor          : 'rgba(255, 0, 4, 1)',
+			  pointStrokeColor    : '#c1c7d1',
+			  pointHighlightFill  : '#fff',
+			  pointHighlightStroke: 'rgba(255, 0, 4,1)',
+			  data                : [8938, 8865, 8795,9960,10160,10668,11682,12037,12537,2502]
+			},
+			{
+			  label               : '美洲',
+			  backgroundColor     : 'rgba(251, 0, 255, 1)',
+			  borderColor         : 'rgba(251, 0, 255, 1)',
+			  pointRadius         : false,
+			  pointColor          : 'rgba(251, 0, 255, 1)',
+			  pointStrokeColor    : '#c1c7d1',
+			  pointHighlightFill  : '#fff',
+			  pointHighlightStroke: 'rgba(251, 0, 255,1)',
+			  data                : [495136, 497597, 502446, 565375,588192,649337, 702049,732478,766254,106117]
+			},
+			{
+			  label               : '大洋洲',
+			  backgroundColor     : 'rgba(251, 255, 0, 1)',
+			  borderColor         : 'rgba(251, 255, 0, 1)',
+			  pointRadius         : false,
+			  pointColor          : 'rgba(251, 255, 0, 1)',
+			  pointStrokeColor    : '#c1c7d1',
+			  pointHighlightFill  : '#fff',
+			  pointHighlightStroke: 'rgba(251, 255, 0,1)',
+			  data                : [70540, 75414, 77722, 93119, 90813, 98226, 108344,121697,134860,22606]
+			},
+			{
+			  label               : '歐洲',
+			  backgroundColor     : 'rgba(0, 255, 94, 1)',
+			  borderColor         : 'rgba(0, 255, 94, 1)',
+			  pointRadius         : false,
+			  pointColor          : 'rgba(0, 255, 94, 1)',
+			  pointStrokeColor    : '#c1c7d1',
+			  pointHighlightFill  : '#fff',
+			  pointHighlightStroke: 'rgba(0, 255, 94,1)',
+			  data                : [212148,218045,223062,264880,274035,299756,330090,350094,386752,59512]
+			},
+		  ]
+		}
+    lineChartData.datasets[0].fill = false;
+    lineChartData.datasets[1].fill = false;
+	lineChartData.datasets[2].fill = false;
+	lineChartData.datasets[3].fill = false;
+	lineChartData.datasets[4].fill = false;
+    lineChartOptions.datasetFill = false
+
+    new Chart(lineChartCanvas, {
+      type: 'line',
+      data: lineChartData,
+      options: lineChartOptions
+    })
+
+    //--------------
+    //- AREA CHART -
+    //--------------
+
+    // Get context with jQuery - using jQuery's .get() method.
+    var lineChart2Canvas = $('#lineChart2').get(0).getContext('2d')
+
+    var lineChart2Data = {
+      labels  : ['2011', '2012', '2013', '2014', '2015', '2016', '2017','2018','2019','2020'],
+      datasets: [
+        {
+          label               : '香港',
+          backgroundColor     : 'rgba(0, 255, 242,0.9)',
+          borderColor         : 'rgba(0, 255, 242,0.8)',
+          pointRadius          : false,
+          pointColor          : '#3b8bba',
+          pointStrokeColor    : 'rgba(0, 255, 242,1)',
+          pointHighlightFill  : '#fff',
+          pointHighlightStroke: 'rgba(0, 255, 242,1)',
+          data                : [764033,949654,1105223,1276039,1389529,1474521,1540765,1506536,1598223,162318]
+        },
+        {
+          label               : '中國大陸',
+          backgroundColor     : 'rgba(255, 0, 4, 1)',
+          borderColor         : 'rgba(255, 0, 4, 1)',
+          pointRadius         : false,
+          pointColor          : 'rgba(255, 0, 4, 1)',
+          pointStrokeColor    : '#c1c7d1',
+          pointHighlightFill  : '#fff',
+          pointHighlightStroke: 'rgba(255, 0, 4,1)',
+          data                : [1784185,2586428,2874702,3987152,4184102,3511734,2732549,2695615,2714065,111050]
+        },
+		{
+          label               : '日本',
+          backgroundColor     : 'rgba(251, 0, 255, 1)',
+          borderColor         : 'rgba(251, 0, 255, 1)',
+          pointRadius         : false,
+          pointColor          : 'rgba(251, 0, 255, 1)',
+          pointStrokeColor    : '#c1c7d1',
+          pointHighlightFill  : '#fff',
+          pointHighlightStroke: 'rgba(251, 0, 255,1)',
+          data                : [1294758,1432315,1421550,1634790,1627229,1895702,1898854,1969151,2167952,269659]
+        },
+		{
+          label               : '韓國',
+          backgroundColor     : 'rgba(251, 255, 0, 1)',
+          borderColor         : 'rgba(251, 255, 0, 1)',
+          pointRadius         : false,
+          pointColor          : 'rgba(251, 255, 0, 1)',
+          pointStrokeColor    : '#c1c7d1',
+          pointHighlightFill  : '#fff',
+          pointHighlightStroke: 'rgba(251, 255, 0,1)',
+          data                : [242902,259089,351301,527684,658757,884397,1054708,1019441,1242598,178911]
+        },
+		{
+          label               : '馬來西亞',
+          backgroundColor     : 'rgba(0, 255, 94, 1)',
+          borderColor         : 'rgba(0, 255, 94, 1)',
+          pointRadius         : false,
+          pointColor          : 'rgba(0, 255, 94, 1)',
+          pointStrokeColor    : '#c1c7d1',
+          pointHighlightFill  : '#fff',
+          pointHighlightStroke: 'rgba(0, 255, 94,1)',
+          data                : [307898,341032,394326,439240,431481,474420,528019,526129,537692,72705]
+        },
+		{
+          label               : '其他',
+          backgroundColor     : 'rgba(21, 0, 255, 1)',
+          borderColor         : 'rgba(21, 0, 255, 1)',
+          pointRadius         : false,
+          pointColor          : 'rgba(21, 0, 255, 1)',
+          pointStrokeColor    : '#c1c7d1',
+          pointHighlightFill  : '#fff',
+          pointHighlightStroke: 'rgba(21, 0, 255,1)',
+          data                : [1693708,1742952,1869178,2045299,2148687,2449505,2984706,3349835,3603575,583218]
+        },
+      ]
+    }
+	lineChart2Data.datasets[0].fill = false;
+    lineChart2Data.datasets[1].fill = false;
+	lineChart2Data.datasets[2].fill = false;
+	lineChart2Data.datasets[3].fill = false;
+	lineChart2Data.datasets[4].fill = false;
+	lineChart2Data.datasets[5].fill = false;
+
+    // This will get the first returned node in the jQuery collection.
+    new Chart(lineChart2Canvas, {
+      type: 'line',
+      data: lineChart2Data,
+      options: lineChartOptions
+    })
+
+
+
+    var lineChart3Canvas = $('#lineChart3').get(0).getContext('2d')
+	var lineChart3Data = {
+		  labels  : ['2011', '2012', '2013', '2014', '2015', '2016', '2017','2018','2019','2020'],
+		  datasets: [
+			{
+			  label               : '產值(美元)',
+			  backgroundColor     : 'rgba(255, 250, 250, 1)',
+			  borderColor         : 'rgba(255, 250, 250, 1',
+			  pointRadius         : false,
+			  pointColor          : 'rgba(255, 250, 250, 1)',
+			  pointStrokeColor    : '#c1c7d1',
+			  pointHighlightFill  : '#fff',
+			  pointHighlightStroke: 'rgba(255, 250, 250, 1)',
+			  data                : [11065000000,11769000000,12322000000,14615000000,14388000000,13374000000,12315000000,13705000000,14000000000,1666666666]
+			},
+		  ]
+		}
+    lineChart3Data.datasets[0].fill = false;
+
+    new Chart(lineChart3Canvas, {
+      type: 'line',
+      data: lineChart3Data,
+      options: lineChartOptions
+    })
+
+
+    //-------------
+    //- DONUT CHART -
+    //-------------
+    // Get context with jQuery - using jQuery's .get() method.
+    var donutChartCanvas = $('#donutChart').get(0).getContext('2d')
+    var donutData        = {
+      labels: [
+          'Chrome',
+          'IE',
+          'FireFox',
+          'Safari',
+          'Opera',
+          'Navigator',
+      ],
+      datasets: [
+        {
+          data: [700,500,400,600,300,100],
+          backgroundColor : ['#f56954', '#00a65a', '#f39c12', '#00c0ef', '#3c8dbc', '#d2d6de'],
+        }
+      ]
+    }
+    var donutOptions     = {
+      maintainAspectRatio : false,
+      responsive : true,
+    }
+    //Create pie or douhnut chart
+    // You can switch between pie and douhnut using the method below.
+    new Chart(donutChartCanvas, {
+      type: 'doughnut',
+      data: donutData,
+      options: donutOptions
+    })
+
+    //-------------
+    //- PIE CHART -
+    //-------------
+    // Get context with jQuery - using jQuery's .get() method.
+    var pieChartCanvas = $('#pieChart').get(0).getContext('2d')
+    var pieData        = donutData;
+    var pieOptions     = {
+      maintainAspectRatio : false,
+      responsive : true,
+    }
+    //Create pie or douhnut chart
+    // You can switch between pie and douhnut using the method below.
+    new Chart(pieChartCanvas, {
+      type: 'pie',
+      data: pieData,
+      options: pieOptions
+    })
+
+    //-------------
+    //- BAR CHART -
+    //-------------
+    var barChartCanvas = $('#barChart').get(0).getContext('2d')
+    var barChartData = $.extend(true, {}, areaChartData)
+    var temp0 = areaChartData.datasets[0]
+    var temp1 = areaChartData.datasets[1]
+    barChartData.datasets[0] = temp1
+    barChartData.datasets[1] = temp0
+
+    var barChartOptions = {
+      responsive              : true,
+      maintainAspectRatio     : false,
+      datasetFill             : false
+    }
+
+    new Chart(barChartCanvas, {
+      type: 'bar',
+      data: barChartData,
+      options: barChartOptions
+    })
+
+    //---------------------
+    //- STACKED BAR CHART -
+    //---------------------
+    var stackedBarChartCanvas = $('#stackedBarChart').get(0).getContext('2d')
+    var stackedBarChartData = $.extend(true, {}, barChartData)
+
+    var stackedBarChartOptions = {
+      responsive              : true,
+      maintainAspectRatio     : false,
+      scales: {
+        xAxes: [{
+          stacked: true,
+        }],
+        yAxes: [{
+          stacked: true
+        }]
+      }
+    }
+
+    new Chart(stackedBarChartCanvas, {
+      type: 'bar',
+      data: stackedBarChartData,
+      options: stackedBarChartOptions
+    })
+  })
+</script>
+</body>
+</html>
